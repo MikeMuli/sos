@@ -2298,7 +2298,7 @@ input:checked + .slider:before {
   z-index: 200;
 }
 
-.popups .visitation-confirmation, .popups .loginSignup, .signup-confirmation {
+.popups .visitation-confirmation, .popups .loginSignup, .signup-confirmation, .resetPass , .resetPassConf {
   display: block;
   position: fixed;
   top: 50%;
@@ -2313,7 +2313,7 @@ input:checked + .slider:before {
   z-index: 201;
 }
 
-.popups .visitation-confirmation #popClose , .signup-confirmation #popClose {
+.popups .visitation-confirmation #popClose , .signup-confirmation #popClose, .resetPass #popClose, .resetPassConf #popClose {
   position: absolute;
   font-size: 2em;
   top: 10px;
@@ -2321,12 +2321,12 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 
-.popups .visitation-confirmation .pop-upBdy, .popups .signup-confirmation .pop-upBdy {
+.popups .visitation-confirmation .pop-upBdy, .popups .signup-confirmation .pop-upBdy, .resetPass .pop-upBdy , .resetPassConf .pop-upBdy {
   padding: 20px;
   text-align: center;
 }
 
-.popups .visitation-confirmation .pop-upBdy h3, .signup-confirmation .pop-upBdy h3 {
+.popups .visitation-confirmation .pop-upBdy h3, .signup-confirmation .pop-upBdy h3, .resetPass .pop-upBdy h3, .resetPassConf h3 {
   color: #c3272f;
   font-size: 24px;
   font-weight: 800;
@@ -2349,7 +2349,7 @@ input:checked + .slider:before {
   text-transform: uppercase;
 }
 
-.signup-confirmation .pop-upBdy #popConf img {
+.signup-confirmation .pop-upBdy #popConf img, .resetPassConf img {
   max-width: 150px;
 }
 
@@ -2386,7 +2386,7 @@ input:checked + .slider:before {
   margin-bottom: 5px;
 }
 
-.popups .visitation-confirmation .pop-upBdy #okBtn {
+.popups .visitation-confirmation .pop-upBdy #okBtn, .resetPassConf #okBtn {
   display: inline-block;
   background: #c3272f;
   color: #fff;
@@ -2471,6 +2471,60 @@ input:checked + .slider:before {
 .popups .loginSignup .socialSignIn .label, .popups .loginSignup .socialSignUp .label {
   color: #000;
   font-style: italic;
+}
+
+.resetPass {
+  border-top: 6px solid #c3272f;
+}
+
+.resetPass .pop-upBdy {
+  padding: 20px 30px;
+  text-align: center;
+}
+
+.resetPass form .form-group {
+  text-align: left;
+  margin-top: 30px;
+}
+
+.resetPass form .form-group label {
+  font-weight: 500;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.resetPass form .form-group input[type="email"] {
+  border: 0;
+  border-bottom: 1px solid #000;
+  border-radius: 0;
+  padding-left: 0; 
+}
+
+.resetPass form .send-button {
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px 0;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  font-weight: 600;
+  background: #c3272f;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.resetPassConf #okBtn {
+  text-transform: uppercase;
+}
+
+.resetPassConf .pG p {
+  line-height: 1.2em;
+  margin-bottom: 15px;
+}
+
+.resetPassConf .pG p span {
+  display: block;
+  font-weight: 600;  
 }
 
 @media screen and (max-width: 480px) {
