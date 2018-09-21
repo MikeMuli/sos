@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SOS Co-Working Space (User Profile)</title>
+    <meta name="description" content="SOS Coworking Space">
+    <meta name="keywords" content="SOS Coworking Space">
+    
+    <link rel="stylesheet" href="css/styles-merged.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <section class="probootstrap-section backend fl">
+      <div class="container">
+        <div class="row">
+          <div class="profileDiv hide">
+            <div class="col-md-12 probootstrap-section-heading nopdlr">
+              <h2 class="mb30 text-left probootstrap-user-heading">My Profile</h2>
+            </div>
+            <div class="col-md-12 bkBd nopdlr">
+              <div class="bkInner">
+              <div class="userPic">
+                <span class="picImg"><img src="img/.png" alt="" /></span>
+                <span class="editFx">Change Picture</span>
+              </div>
+              <div class="basicInfo">
+                <h3>Basic Information</h3>
+                <form>
+                  <div class="fl">
+                    <div class="form-group">
+                      <label>Name</label>
+                      <input type="text" name="fullname"  class="form-control my-input" id="fullname" placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                      <label>Contact Number</label>
+                      <input type="text" name="contactnumber"  class="form-control my-input" id="contactnumber" placeholder="Contact Number">
+                    </div>
+                    <div class="form-group">
+                      <label>Address</label>
+                      <input type="text" name="address" class="form-control my-input" id="address" placeholder="Address">
+                    </div>
+                  </div>
+                  <div class="fl">
+                    <div class="form-group">
+                      <label>Email Address</label>
+                      <input type="text" name="emailaddress" class="form-control my-input" id="emailaddress" placeholder="Email Address">
+                    </div>
+                    <div class="form-group">
+                      <label>Date of Birth</label>
+                      <input type="text" name="DOB"  class="form-control my-input" id="dob" placeholder="D.O.B">
+                    </div>
+                    <div class="form-group">
+                      <label>Interest In</label>
+                      <input type="text" name="interestIn"  class="form-control my-input" id="interestIn" placeholder="Interest In">
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-block send-button tx-tfm">Save and Change</button>
+                  <span class="editFx">Edit</span>
+                </form>
+              </div>
+              <div class="privacyInfo">
+                <h3>Privacy Information</h3>
+                <form>
+                  <div class="fl">
+                    <div class="form-group">
+                      <label>Current Password</label>
+                      <input type="text" name="fullname"  class="form-control my-input" id="fullname" placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                      <label>Re-Type New Password</label>
+                      <input type="text" name="contactnumber"  class="form-control my-input" id="contactnumber" placeholder="Contact Number">
+                    </div>
+                  </div>
+                  <div class="fl">
+                    <div class="form-group">
+                      <label>New Password</label>
+                      <input type="text" name="emailaddress"  class="form-control my-input" id="emailaddress" placeholder="Email Address">
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-block send-button tx-tfm">Save and Change</button>
+                  <span class="editFx">Edit</span>
+                </form>
+              </div>
+              <div class="membershipInfo">
+                <h3>Membership Information</h3>
+                <form>
+                  <div class="fl">
+                    <div class="form-group">
+                      <label>Membership Type</label>
+                      <input type="text" name="fullname"  class="form-control my-input" id="fullname" placeholder="Full Name">
+                    </div>
+                  </div>
+                  <div class="fl">
+                    <div class="form-group">
+                      <label>Valid Until</label>
+                      <input type="text" name="emailaddress"  class="form-control my-input" id="emailaddress" placeholder="Email Address">
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-block send-button tx-tfm">Save and Change</button>
+                  <span class="editFx">Edit</span>
+                </form>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          <div class="creditDiv hide">
+            <div class="col-md-12 probootstrap-section-heading nopdlr">
+              <h2 class="mb30 text-left probootstrap-user-heading">Credit</h2>
+            </div>
+            <div class="col-md-12 bkBd nopdlr">
+              <div class="creditMsg">
+                <span>You currently have</span>
+                <span class="currentCred">500</span>
+                <span>credits</span>
+              </div>
+            </div>
+            <div class="col-md-12 bkBd nopdlr">
+              <div class="tabs">
+                <a href="#" id="#tab1">Top-Up Credit</a>
+                <a href="#" id="#tab2" class="active">Credit History</a>
+              </div>
+              <div class="tabsContent">
+                <div class="tabTopUpCred hide">
+                  <span class="tabTpHd">
+                    TOP UP AMOUNT<br/><i>(RM1=1 Credit)</i>
+                  </span>
+                  <div class="credOptionList">
+                    <div class="credOption active">
+                      <span class="curr">RM</span>
+                      <span class="amn">20</span>
+                      <span class="xdets">(20 Credits)</span>
+                    </div>
+                    <div class="credOption">
+                      <span class="curr">RM</span>
+                      <span class="amn">50</span>
+                      <span class="xdets">(55 Credits)</span>
+                    </div>
+                    <div class="credOption">
+                      <span class="curr">RM</span>
+                      <span class="amn">100</span>
+                      <span class="xdets">(120 Credits)</span>
+                    </div>
+                    <div class="credOption">
+                      <span class="curr">other amount</span>
+                    </div>                    
+                  </div>
+                  <div class="chsPayment">
+                    <span class="chsPaymentHd">
+                      Choose Payment Method
+                    </span>
+                    <div class="chspayList">
+                      <div class="payListOption active">
+                        <span class="payCred"><img src="img/icon-13.png" alt="" /></span>
+                      </div>
+                      <div class="payListOption">
+                        <span class="payPaypal"><img src="img/icon-13.png" alt="" /></span>
+                      </div>
+                    </div>
+                    <div class="payOption">
+                      <form class="payCredForm">
+                        <div class="form-group">
+                            <label for="CardHolder">Card Holder</label>
+                            <input type="text" name="CardHolder"  class="form-control my-input" id="CardHolder" placeholder="Card Holder">
+                        </div>
+                        <div class="form-group">
+                            <label for="CardNumber">Card Number</label>
+                            <input type="text" name="CardNumber"  class="form-control my-input" id="CardNumber" placeholder="Card Number">
+                        </div>
+                        <div class="form-group">
+                            <label for="ExpiryDate">Expiry Date</label>
+                            <input type="text" name="ExpiryDate"  class="form-control my-input" id="ExpiryDate" placeholder="Expiry Date">
+                        </div>
+                        <div class="form-group">
+                            <label for="CVV">CVV</label>
+                            <input type="text" name="CVV"  class="form-control my-input" id="CVV" placeholder="CVV">
+                        </div>
+                        <div class="form-group mt20 fr text-right">
+                          <div class="checkbox checkbox-primary">
+                              <input id="agreeCntrl" type="checkbox" checked>
+                              <label for="agreeCntrl">
+                                  I agree to S.O.S’s Terms of Service and Privacy Policy
+                              </label>
+                          </div>
+                          <button type="submit" class=" btn btn-block send-button tx-tfm">Next</button>
+                        </div>
+                      </form>
+                      <form class="payPalForm">
+                        <div class="form-group">
+                            <label for="EmailAddress">Email Address</label>
+                            <input type="text" name="EmailAddress"  class="form-control my-input" id="EmailAddress" placeholder="Email Address">
+                        </div>
+                        <div class="form-group">
+                            <label for="PayPass">Password</label>
+                            <input type="password" name="Password" class="form-control my-input" id="PayPass" placeholder="Password">
+                        </div>
+                        <div class="form-group mt20 fr text-right">
+                          <button type="submit" class=" btn btn-block send-button tx-tfm">Next</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tabCredHistory">
+                  <div class="tabcredTop">
+                    <select class="selectCredList" id="">
+                        <option>Today</option>
+                        <option>xxxx</option>
+                        <option>xxxx</option>
+                        <option>xxxx</option>
+                    </select>
+                    <span class="downloadLink">Download All</span>
+                  </div>
+                  <table class="table table-striped credhistTable">
+                    <thead>
+                        <tr>
+                           <th>NO.</th>
+                           <th>Date</th>
+                           <th>Invoice Number</th>
+                           <th>Amount</th>
+                           <th>Download</th>
+                        </tr>
+                     </thead>
+                     <tr>
+                        <td>1</td>
+                        <td>07 JULY 2018</td>
+                        <td>#11312</td>
+                        <td>$150</td>
+                        <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="icon icon-download2"></span></a></td>
+                     </tr>
+                     <tr>
+                        <td>2</td>
+                        <td>01 JULY 2018</td>
+                        <td>#10143</td>
+                        <td>$150</td>
+                        <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="icon icon-download2"></span></a></td>
+                     </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+ 
+          <form class="facilitiesDiv" method="post">
+            <div class="col-md-12 probootstrap-section-heading nopdlr">
+              <h2 class="mb30 text-left probootstrap-user-heading">Facilities Booking</h2>
+            </div>
+            <div class="col-md-12 bkBd nopdlr">
+              <div class="facBookTab">
+                <a href="#" id="conTab" class="fl">Convenient</a>
+                <a href="#" id="rmTab" class="active">Rooms</a>
+                <a href="#" id="hisTab" class="fr">History</a>
+              </div>
+              <div class="facBookCont">
+                <div class="convContent hide">
+                  <table class="table table-striped credhistTable">
+                    <thead>
+                        <tr>
+                           <th>ITEM</th>
+                           <th>TYPE</th>
+                           <th><span class="icon icon-plus"></th>
+                        </tr>
+                     </thead>
+                     <tr>
+                        <td><div class="checkbox">
+                                <input class="checkboxLckr" type="checkbox" checked>
+                            </div>
+                            Locker</td>
+                        <td>
+                          <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                            <span class="absolute-no">Monthly</span>
+                          </label>
+                          <div class="docs-datepicker">
+                             <div class="input-group">
+                                <input type="text" class="form-control docs-date" name="date" placeholder="Date">
+                                <span class="daysPicked">1 day</span>
+                             </div>
+                             <div class="docs-datepicker-container"></div>
+                          </div>
+                        </td>
+                        <td>2 CREDITS</td>
+                     </tr>
+                     <tr>
+                        <td>
+                            <div class="checkbox">
+                                <input class="checkboxConf" type="checkbox" checked>
+                            </div>
+                          Conference room</td>
+                        <td>
+                          <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                            <span class="absolute-no">Monthly</span>
+                          </label>
+                          <div class="docs-datepicker">
+                              <div class="input-group">
+                                <input type="text" class="form-control docs-date" name="date" placeholder="Date">
+                              </div>
+                              <div class="docs-datepicker-container"></div>
+                              <span class="daysPicked">1 day</span>
+                          </div>
+                          <div id="datetimepickerDate" class="timerange">
+                            <div class="input-group">
+                              <input type="text" class="form-control timePicked" name="time" placeholder="Time">
+                              <span class="timeClock icon icon-clock"></span>
+                            </div>
+                            <span class="hrsPicked">1 Hour</span>
+                          </div>
+                        </td>
+                        <td>10 CREDITS</td>
+                     </tr>
+                      <tr class="totalRow">
+                        <td class="ttlHd">Total:</td>
+                        <td class="ttlCred"><em>12</em>Credits</td>
+                        <div class="clearfix"></div>
+                        <td>
+                          <button type="submit" class=" btn btn-block send-button tx-tfm">Proceed</button>
+                        </td>
+                      </tr>
+                  </table>
+                </div>
+                <div class="rmContent">
+                  <div class="rmFifLeft">
+                      <div class="rmFifTabs">
+                        <a href="#" id="tabs1" class="active">Upcoming</a>
+                        <a href="#" id="tabs2">Past</a>
+                      </div>
+                      <div class="rmFifTabContent">
+                        <div class="rmFifTabContentUpcoming">
+                          <div class="event">
+                            <span class="icon icon-cross reDel"></span>
+                            <span>20 AUG 2018</span>
+                            <span>2:00PM</span>
+                            <span>SS15</span>
+                            <span>BOOK CONFERENCE ROOM</span>
+                          </div>
+                          <div class="event">
+                            <span class="icon icon-cross reDel"></span>
+                            <span>20 AUG 2018</span>
+                            <span>2:00PM</span>
+                            <span>SS15</span>
+                            <span>BOOK CONFERENCE ROOM</span>
+                          </div>
+                        </div>
+                        <div class="rmFifTabContentPast">
+                        </div>
+                      </div>
+                  </div>
+                  <div class="rmFifRight">
+                    <table class="table-condensed table-bordered table-striped calTable">
+                            <thead>
+                                <tr>
+                                  <th colspan="7">
+                                    <span class="btn-group">
+                                        <a class="btn"><i class="icon-chevron-left"></i></a>
+                                      <a class="btn active">Feb 2018</a>
+                                      <a class="btn"><i class="icon-chevron-right"></i></a>
+                                    </span>
+                                  </th>
+                                </tr>
+                                <tr>
+                                    <th>Su</th>
+                                    <th>Mo</th>
+                                    <th>Tu</th>
+                                    <th>We</th>
+                                    <th>Th</th>
+                                    <th>Fr</th>
+                                    <th>Sa</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="muted">29</td>
+                                    <td class="muted">30</td>
+                                    <td class="muted">31</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                </tr>
+                                <tr>
+                                    <td>19</td>
+                                    <td class="active"><span class="actDot"></span>20</td>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td><span class="actDot"></span>28</td>
+                                    <td>29</td>
+                                    <td class="muted">1</td>
+                                    <td class="muted">2</td>
+                                    <td class="muted">3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <div class="invoiceDiv">
+            <div class="col-md-12 probootstrap-section-heading nopdlr">
+              <h2 class="mb30 text-left probootstrap-user-heading">Invoice History</h2>
+            </div>
+            <div class="col-md-12 bkBd nopdlr">
+              
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="probootstrap-section backendNav">
+        <div class="userDetails">
+          <span class="userPic">
+            <img src="" alt="" />
+          </span>
+          <span class="userName">
+            Johnson Tan
+          </span>              
+        </div>
+        <ul class="listNavDets">
+          <li><a href="#"><img src="img/icon-13.png" alt="" /> My Profile</a></li>
+          <li><a href="#"><img src="img/icon-14.png" alt="" /> Credit<span class="usrRemCred"></span></a></li>
+          <li><a href="#"><img src="img/icon-15.png" alt="" /> Facilities Booking</a></li>
+          <li><a href="#"><img src="img/icon-16.png" alt="" /> Invoice History</a></li>
+        </ul>
+        <div class="logOut">
+          <a href="#"><img src="img/" alt="" />Log Out</a>
+        </div>
+    </section>
+
+    <div class="popups">
+      <div class="visitation-confirmation hide">
+        <div id="popClose"><span class="icon icon-cross"></span></div>
+        <div class="pop-upBdy">
+          <div id="popMail"><span class="icon icon-envelop"></span></div>
+          <h3>Visitation - Confirmation</h3>
+          <p>Thank you for your interest!</p>
+          <p>We have sent the confirmation details to your email <span class="confEm">test@gmail.com</span></p>
+          <p>Looking forward to seeing you on <span class="confDte">20/08/2018 2:00pm</span>
+          <a href="#" id="okBtn">Ok</a>
+        </div>
+      </div>
+      <div class="overlayPopup hide"></div>
+    </div>
+
+    <script src="js/scripts.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>

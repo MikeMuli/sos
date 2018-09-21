@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SOS Co-Working Space</title>
+    <meta name="description" content="SOS Coworking Space">
+    <meta name="keywords" content="SOS Coworking Space">
+    
+    <link rel="stylesheet" href="css/styles-merged.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default probootstrap-navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div id="navbar-collapse" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="#" data-nav-section="home">Home</a></li>
+            <li><a href="#" data-nav-section="products">Products</a></li>
+          </ul>
+          <a class="navbar-brand" href="index.html" title="SOS" style="background-image: url(img/logo.png);"></a>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" data-nav-section="contact">Contact</a></li>
+            <li><a href="#" id="popLogin"><span class="icon icon-user"></span> Log in / Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <section class="probootstrap-hero" style="background-image: url(img/heroslide.png);" data-section="home" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row intro-text">
+          <div class="col-md-10 col-md-offset-1 text-center">
+            <h1 class="probootstrap-heading probootstrap-animate">Be Connected</h1>
+            <div class="probootstrap-subheading center">
+              <p class="probootstrap-animate"><a id="bookTourbtn" href="#" target="_blank" role="button" class="btn btn-primary">Book a tour</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scrollDwnIcon probootstrap-animate"><a href="#" data-nav-section="products"><span class="icon icon-circle-down"></span><br/>Scroll</a></div>
+      
+      <div class="filterform hide">
+        <div class="closeIcon"><span class="icon icon-cross"></span></div>
+        <form class="probootstrap-animate" action="" method="post">
+            <div class="form-group">
+              <div class="controls">
+                <select name="gender" id="gender" placeholder="Gender">
+                  <option value="Mr">Mr.</option>
+                  <option value="Ms">Ms.</option>
+                  <option value="Mrs">Mrs.</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+               <input type="text" name="fullname"  class="form-control my-input" id="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <div class="controls">
+                <select name="numpax" id="numpax" placeholder="Pax">
+                  <option value="">Pax</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+               <input type="text" name="emailaddress"  class="form-control my-input" id="emailaddress" placeholder="Please enter your email address">
+            </div>
+            <div class="form-group">
+               <input type="text" name="contactnumber"  class="form-control my-input" id="contactnumber" placeholder="Please enter your contact number">
+            </div>
+            <div class="form-group">
+              <div class="controls">
+                <select name="numlocatiom" id="numlocation" placeholder="Location">
+                  <option value="">Location</option>
+                  <option value="l1">?????</option>
+                  <option value="l2">?????</option>
+                  <option value="l3">?????</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="docs-datepicker">
+                <div class="input-group">
+                  <input type="text" class="form-control docs-date" name="date" placeholder="Date">
+                </div>
+                <div class="docs-datepicker-container"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="controls">
+                <select name="time" id="time" placeholder="Time">
+                  <option value="">Time</option>
+                  <option value="t1">?????</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+               <div class="controls">
+                <select name="reason" id="reason" placeholder="Reason">
+                  <option value="">Reason</option>
+                  <option value="r1">Visitation</option>
+                  <option value="r2">Interview</option>
+                  <option value="r3">Business Purpose</option>
+                  <option value="r4">Others</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group text-center">
+               <button type="submit" class=" btn btn-block send-button tx-tfm"><span class="icon icon-mail3"></span></button>
+            </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="probootstrap-section products" data-section="products">
+      <div class="container">
+        <div class="row text-center mb50">
+          <div class="col-md-12 probootstrap-section-heading nopdlr">
+            <h2 class="mb30 text-left text-black probootstrap-heading">Products</h2>
+          </div>
+        </div>
+        <!-- END row -->
+        <div class="row">
+          <div class="col-md-2 nopdlr">
+            <div class="probootstrap-products bdNone">
+              <ul class="probootstrap-list text-left mb50 firstCol">
+                <li>High Speed Internet</li>
+                <li>Telephone</li>
+                <li>Multifunction Printer</li>
+                <li>Office Supplies</li>
+                <li>Mailbox</li>
+                <li>Pantry/Cafeteria</li>
+                <li>Free Flow Coffee</li>
+                <li>Cafeteria</li>
+                <li>Daily Cleaning</li>
+                <li>Utilities</li>
+                <li>Mail Handling Services</li>
+                <li>Lockers</li>
+                <li>Conference Room</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2 nopdlr">
+            <div class="probootstrap-products">
+              <img src="img/SOS-Icon-23.png" alt="" />
+              <h2>Cold Desk</h2>
+              <p class="probootstrap-price"><strong>RM 99 / MONTH</strong></p>
+              <p><a href="#" class="btn btn-outline-red">Subscribe</a></p>
+              <ul class="probootstrap-list text-left mb50">
+                <li><span class="icon icon-checkmark"></span></li>
+                <li class="gB600">N / A</li>
+                <li class="gC">.</li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li class="gC">.</li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li class="gC">.</li>
+                <li class="gC">.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2 nopdlr">
+            <div class="probootstrap-products">
+              <img src="img/SOS-Icon-24.png" alt="" />
+              <h2>Hot Desk</h2>
+              <p class="probootstrap-price"><strong>RM 199 / MONTH</strong></p>
+              <p><a href="#" class="btn btn-outline-red">Subscribe</a></p>
+              <ul class="probootstrap-list text-left mb50">
+                <li><span class="icon icon-checkmark"></span></li>
+                <li class="gB600">N / A</li>
+                <li class="flr gB600">B/W 0.15 </li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li class="gC">.</li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li class="gC">.</li>
+                <li class="gC">.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2 nopdlr">
+            <div class="probootstrap-products">
+              <img src="img/SOS-Icon-25.png" alt="" />
+              <h2>Studio 3</h2>
+              <p class="probootstrap-price"><strong>RM 1,600 / MONTH</strong></p>
+              <p><a href="#" class="btn btn-outline-red">Subscribe</a></p>
+              <ul class="probootstrap-list text-left mb50">
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li class="flc gB600">credits/pc 0.50 </li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li class="gB600">Honesty Corner</li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li class="gB600">2 credits / DAY</li>
+                <li class="gB600">10 credits /HOUR</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2 nopdlr">
+            <div class="probootstrap-products">
+              <img src="img/SOS-Icon-25.png" alt="" />
+              <h2>Studio 4</h2>
+              <p class="probootstrap-price"><strong>RM 2,000 / MONTH</strong></p>
+              <p><a href="#" class="btn btn-outline-red">Subscribe</a></p>
+              <ul class="probootstrap-list text-left mb50">
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li class="fll gB600">credits/pc</li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li class="gC">.</li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li class="gC">.</li>
+                <li class="gC">.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2 nopdlr">
+            <div class="probootstrap-products">
+              <img src="img/SOS-Icon-25.png" alt="" />
+              <h2>Studio6</h2>
+              <p class="probootstrap-price"><strong>RM 2,700 / MONTH</strong></p>
+              <p><a href="#" class="btn btn-outline-red">Subscribe</a></p>
+              <ul class="probootstrap-list text-left mb50">
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li class="gC">.</li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li class="gC">.</li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li><span class="icon icon-checkmark"></span></li>
+                <li class="gC">.</li>
+                <li class="gC">.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 nopdlr">
+            <div class="productOrderingForm hide">
+              <div class="orderDetails">
+                <div class="fifLeft">
+                  <img src="img/SOS-Icon-24.png" alt="" />
+                </div>
+                <div class="fifRight">
+                  <div class="productPrice">
+                    <span class="productPlanName">Solo</span>
+                    <span class="productPriceTxt">rm 799 / month</span>
+                    <select name="numTbls" id="numTbls">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                    </select>
+                  </div>
+                  <ul class="productOffLst">
+                    <div class="fl">
+                      <li>High speed internet</li>
+                      <li>Office supplies</li>
+                      <li>Free flow coffee</li>
+                      <li>Cafeteria</li>
+                    </div>
+                    <div class="fl">
+                      <li>Daily cleaning</li>
+                      <li>Utilities</li>
+                      <li>Mail handling services</li>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+              <form class="orderingPaymentForm">
+                <div class="formHeader">
+                  <span class="fl">Payment</span>
+                  <span class="fr">Payment</span>
+                </div>
+                <div class="formBody">
+                  <div class="form-group">
+                    <label>Card Number</label>
+                    <input type="text" name="cardnumber"  class="form-control my-input" id="cardnumber" placeholder="Card Number">
+                  </div>
+                  <div class="form-group">
+                    <label>Expiry</label>
+                    <input type="text" name="expiry"  class="form-control my-input" id="expiry" placeholder="Expiry">
+                  </div>
+                  <div class="form-group">
+                    <label>CVV</label>
+                    <input type="text" name="cvv"  class="form-control my-input" id="cvv" placeholder="CVV">
+                  </div>
+                </div>
+                <div class="formTotals">
+                  <div class="subTotals">
+                    <span class="fl">SUBTOTAL</span>
+                    <span class="fr">1 Month x 799</span>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="completeTotals">
+                    <span class="fl">TOTAL</span>
+                    <span class="fr">799</span>
+                  </div>
+                </div>
+                <div class="formControls">
+                  <div class="checkbox checkbox-primary">
+                      <input id="agreeCntrl" type="checkbox" checked>
+                      <label for="agreeCntrl">
+                          I agree to S.O.S’s Terms of Service and Privacy Policy
+                      </label>
+                  </div>
+                  <button type="submit" class="btn btn-block send-button tx-tfm">Confirm</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- END section -->
+
+    <section class="probootstrap-section" data-section="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 probootstrap-section-heading nopdlr">
+            <h2 class="mb30 text-left text-black probootstrap-heading">Contact</h2>
+          </div>
+          <form action="" class="probootstrap-form">
+            <h2 class="mt0">Keeping in Touch with Us</h2>
+            <p>Let’s talk business or just have a coffee.<br/>We would love to hear from you!</p>
+            <div class="col-md-4 nopdlr">
+              <div class="form-group">
+                <label>Name:</label>
+                <input type="text" class="form-control" placeholder="Your Name">
+              </div>
+              <div class="form-group">
+                <label>Email:</label>
+                <input type="email" class="form-control" placeholder="Your Email">
+              </div>
+              <div class="form-group">
+                <label>Phone:</label>
+                <input type="email" class="form-control" placeholder="Your Phone">
+              </div>
+              <div class="form-group">
+                <label>Message:</label>
+                <textarea class="form-control"cols="30" rows="10" placeholder="Write a Message"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" class="btn btn-primary">
+              </div>
+            </div>
+            <div class="col-md-7 col-md-push-1">
+            <img src="img/map.png" alt="" />
+          </div>
+          </form>
+          
+        </div>
+      </div>
+    </section>
+    
+    <footer class="probootstrap-footer">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-4 text-left">
+            <div class="footer-links">
+              <a href="#" data-nav-section="products">Products</a>
+              <a href="#" data-nav-section="contact">Contact</a>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <span class="cenSpn">SERVICED OFFICE SPACE</span><br/>All Rights Reserved SOS &copy; 2018
+          </div>
+          <div class="col-md-4 text-right">
+            <p class="probootstrap-social">
+              <a href="#"><i class="icon-facebook2"></i></a> <a href="#"><i class="icon-twitter"></i></a> <a href="#"><i class="icon-instagram"></i></a> <a href="#"><i class="icon-youtube"></i></a> <a href="#"><i class="icon-linkedin"></i></a>  <a href="#"><i class="icon-googleplus"></i></a>
+            </p>
+          </div>
+
+          <div class="col-md-12">
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="popups">
+      <div class="visitation-confirmation hide">
+        <div id="popClose"><span class="icon icon-cross"></span></div>
+        <div class="pop-upBdy">
+          <div id="popMail"><span class="icon icon-envelop"></span></div>
+          <h3>Visitation - Confirmation</h3>
+          <p>Thank you for your interest!</p>
+          <p>We have sent the confirmation details to your email <span class="confEm">test@gmail.com</span></p>
+          <p>Looking forward to seeing you on <span class="confDte">20/08/2018 2:00pm</span>
+          <a href="#" id="okBtn">Ok</a>
+        </div>
+      </div>
+      <div class="loginSignup hide">
+        <div class="topSwitch">
+          <a href="#" id="loginSwitch" class="fl">Log in</a>
+          <a href="#" id="signupSwitch" class="fr">Sign Up</a>
+        </div>
+        <form class="formBody">
+          <div class="loginForm hide">
+              <div class="form-group">
+                <label>Email Address:</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="form-group">
+                <label>Password:</label>
+                <input type="password" class="form-control">
+              </div>
+          </div>
+          <div class="signupForm">
+              <div class="form-group">
+                <label>Name:</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="form-group">
+                <label>Email Address:</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="form-group">
+                <label>Password:</label>
+                <input type="password" class="form-control">
+              </div>
+          </div>
+          <div class="actionButtons">
+            <div class="loginAcb hide">
+              <div class="checkbox checkbox-primary">
+                  <input id="logChck" type="checkbox" checked>
+                  <label for="logChck">Keep me logged in</label>
+                  <a href="#" class="fgtPass fr">Forgot your password ?</a>
+              </div>
+
+              <button type="submit" class="btn btn-block send-button tx-tfm fl">Log In</button>
+              <div class="socialSignIn fr">
+                <span class="label">or login with</span>
+                <a href="#" class="socGoog"><img src="img/SOS-Icon-06.png" alt="" /></a>
+                <a href="#" class="socFace"><img src="img/SOS-Icon-07.png" alt="" /></a>
+              </div>
+            </div>
+            <div class="signupAcb">
+              <div class="checkbox checkbox-primary">
+                  <input id="signChck" type="checkbox" checked>
+                  <label for="signChck">By signing up I agree to S.O.S’s Terms of Service and Privacy Policy</label>
+              </div>
+              <button type="submit" class=" btn btn-block send-button tx-tfm">Sign Up</button>
+              <div class="socialSignUp fr">
+                <span class="label">Or sign up with</span>
+                <a href="#" class="socGoog"><img src="img/SOS-Icon-06.png" alt="" /></a>
+                <a href="#" class="socFace"><img src="img/SOS-Icon-07.png" alt="" /></a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="signup-confirmation hide">
+        <div id="popClose"><span class="icon icon-cross"></span></div>
+        <div class="pop-upBdy">
+          <h3>Sign up Successful</h3>
+          <span class="thnk">Thank you</span>
+          <div id="popConf"><img src="img/SOS-Icon-08.png"></div>
+          <p>We will be in touch very soon using the email below<span class="confEm">test@gmail.com</span></p>
+          <p>Please check your email for verification purpose.
+          <div class="tips">
+            <span class="tipsHd">Tips</span>
+            <p>Remember to update your profiule so we could know you better! Make your first booking at schedule!</p>
+          </div>
+        </div>
+      </div>
+      <div class="overlayPopup hide"></div>
+    </div>
+
+    <script src="js/scripts.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
