@@ -547,6 +547,25 @@
           </form>
         </div>
       </div>
+      <div class="resetPassForm hide">
+        <form id="restPsFrm" action="" method="post">
+          <div id="popClose"><span class="icon icon-cross"></span></div>
+          <div class="pop-upBdy">
+            <h3>Reset Password</h3>
+            <form class="">
+              <div class="form-group">
+                  <label>New Password:</label>
+                  <input type="password" class="form-control">
+              </div>
+              <div class="form-group">
+                  <label>Re-type Password:</label>
+                  <input type="password" class="form-control">
+              </div>
+              <button type="submit" class=" btn btn-block send-button tx-tfm">Reset Password</button>
+            </form>
+          </div>
+        </form>
+      </div>
       <div class="resetPassConf hide">
         <div id="popClose"><span class="icon icon-cross"></span></div>
         <div class="pop-upBdy">
@@ -555,6 +574,20 @@
         <div class="pG">
           <p>
             Please check your email<span>johnsontan@gmail.com</span>to reset password
+          </p>
+        </div>
+        <a href="#" id="okBtn">Ok</a>
+      </div>
+      </div>
+
+      <div class="resetPassOk hide">
+        <div id="popClose"><span class="icon icon-cross"></span></div>
+        <div class="pop-upBdy">
+        <div id="resetConf"><img src="img/SOS-Icon-10.png"></div>
+        <h3>Reset Password<br/>successful</h3>
+        <div class="pG">
+          <p>
+            Please <a href="#" id="restLogin">login</a> with your new password.
           </p>
         </div>
         <a href="#" id="okBtn">Ok</a>

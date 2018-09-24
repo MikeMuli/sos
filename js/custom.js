@@ -297,6 +297,42 @@
 			$('.signup-confirmation').removeClass('hide');
 		});
 
+		$('.loginAcb .fgtPass').on('click', function(){
+			$(this).parents('.loginSignup').addClass('hide');
+			$('.resetPass').removeClass('hide');
+		});
+
+		$('.resetPass .send-button').on('click', function(e){
+			e.preventDefault();
+			$('.resetPass').addClass('hide');
+			$('.resetPassConf').removeClass('hide');
+		});
+
+		$('.resetPassConf').find('#popClose').on('click', function(){
+			$(this).parents('.resetPassConf').addClass('hide');
+			$('.overlayPopup').addClass('hide');
+		});
+
+		$('.resetPassConf').find('#okBtn').on('click', function(){
+			$(this).parents('.resetPassConf').addClass('hide');
+			$('.resetPassForm').removeClass('hide');
+		});
+
+		$('.resetPassForm').find('.send-button').on('click', function(e){
+			e.preventDefault();
+			$(this).parents('.resetPassForm').addClass('hide');
+			$('.resetPassOk').removeClass('hide');
+		});
+
+		$('.resetPassOk').find('#restLogin').on('click', function(e){
+			e.preventDefault();
+			$(this).parents('.resetPassOk').addClass('hide');
+			$('.loginSignup').removeClass('hide');
+			$('#loginSwitch').trigger('click');
+		});
+
+		
+
       $('.timerange').on('click', function(e) {
 	    e.stopPropagation();
 	    var input = $(this).find('.timePicked');
