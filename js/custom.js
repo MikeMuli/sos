@@ -331,7 +331,26 @@
 			$('#loginSwitch').trigger('click');
 		});
 
+		$('.productsRow').find('.productSubscribe').on('click', function(){
+			$('.productsRow').addClass('hide');
+			$('.orderRow').removeClass('hide');
+		});
 
+		var accItem = document.getElementsByClassName('accordionItem');
+	    var accHD = document.getElementsByClassName('accordionItemHeading');
+	    var i;
+	    for (i = 0; i < accHD.length; i++) {
+	        accHD[i].addEventListener('click', toggleItem, false);
+	    }
+	    function toggleItem() {
+	        var itemClass = this.parentNode.className;
+	        for (i = 0; i < accItem.length; i++) {
+	            accItem[i].className = 'accordionItem close';
+	        }
+	        if (itemClass == 'accordionItem close') {
+	            this.parentNode.className = 'accordionItem open';
+	        }
+	    }
 
       $('.timerange').on('click', function(e) {
 	    e.stopPropagation();
@@ -477,7 +496,6 @@
 	        value.text(next);
 	      }
 	    );
-
 	  });
 
 	  $(document).on('click', e => {

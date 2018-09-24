@@ -154,7 +154,7 @@
           </div>
         </div>
         <!-- END row -->
-        <div class="row">
+        <div class="row productsRow">
           <div class="col-md-2 nopdlr">
             <div class="probootstrap-products bdNone">
               <ul class="probootstrap-list text-left mb50 firstCol">
@@ -179,7 +179,7 @@
               <img src="img/SOS-Icon-23.png" alt="" />
               <h2>Cold Desk</h2>
               <p class="probootstrap-price"><strong>RM 99 / MONTH</strong></p>
-              <p><a href="#" class="btn btn-outline-red">Subscribe</a></p>
+              <p><a href="#" class="btn btn-outline-red productSubscribe">Subscribe</a></p>
               <ul class="probootstrap-list text-left mb50">
                 <li><span class="icon icon-checkmark"></span></li>
                 <li class="gB600">N / A</li>
@@ -202,7 +202,7 @@
               <img src="img/SOS-Icon-24.png" alt="" />
               <h2>Hot Desk</h2>
               <p class="probootstrap-price"><strong>RM 199 / MONTH</strong></p>
-              <p><a href="#" class="btn btn-outline-red">Subscribe</a></p>
+              <p><a href="#" class="btn btn-outline-red productSubscribe">Subscribe</a></p>
               <ul class="probootstrap-list text-left mb50">
                 <li><span class="icon icon-checkmark"></span></li>
                 <li class="gB600">N / A</li>
@@ -225,7 +225,7 @@
               <img src="img/SOS-Icon-25.png" alt="" />
               <h2>Studio 3</h2>
               <p class="probootstrap-price"><strong>RM 1,600 / MONTH</strong></p>
-              <p><a href="#" class="btn btn-outline-red">Subscribe</a></p>
+              <p><a href="#" class="btn btn-outline-red productSubscribe">Subscribe</a></p>
               <ul class="probootstrap-list text-left mb50">
                 <li><span class="icon icon-checkmark"></span></li>
                 <li><span class="icon icon-checkmark"></span></li>
@@ -248,7 +248,7 @@
               <img src="img/SOS-Icon-25.png" alt="" />
               <h2>Studio 4</h2>
               <p class="probootstrap-price"><strong>RM 2,000 / MONTH</strong></p>
-              <p><a href="#" class="btn btn-outline-red">Subscribe</a></p>
+              <p><a href="#" class="btn btn-outline-red productSubscribe">Subscribe</a></p>
               <ul class="probootstrap-list text-left mb50">
                 <li><span class="icon icon-checkmark"></span></li>
                 <li><span class="icon icon-checkmark"></span></li>
@@ -271,7 +271,7 @@
               <img src="img/SOS-Icon-25.png" alt="" />
               <h2>Studio6</h2>
               <p class="probootstrap-price"><strong>RM 2,700 / MONTH</strong></p>
-              <p><a href="#" class="btn btn-outline-red">Subscribe</a></p>
+              <p><a href="#" class="btn btn-outline-red productSubscribe">Subscribe</a></p>
               <ul class="probootstrap-list text-left mb50">
                 <li><span class="icon icon-checkmark"></span></li>
                 <li><span class="icon icon-checkmark"></span></li>
@@ -291,74 +291,221 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row orderRow hide">
           <div class="col-md-12 nopdlr">
-            <div class="productOrderingForm hide">
-              <div class="orderDetails">
-                <div class="fifLeft">
-                  <img src="img/SOS-Icon-24.png" alt="" />
-                </div>
-                <div class="fifRight">
-                  <div class="productPrice">
-                    <span class="productPlanName">Solo</span>
-                    <span class="productPriceTxt">rm 799 / month</span>
-                    <select name="numTbls" id="numTbls">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                    </select>
-                  </div>
-                  <ul class="productOffLst">
-                    <div class="fl">
-                      <li>High speed internet</li>
-                      <li>Office supplies</li>
-                      <li>Free flow coffee</li>
-                      <li>Cafeteria</li>
+            <div class="productOrderingForm">
+              <form id="prodOdFm">
+                <div class="summarySect">
+                  <span class="sectHd">Summary</span>
+                  <div class="sumSelects">
+                    <div class="form-group">
+                      <div class="controls">
+                        <label>Start Date</label>
+                        <select name="startDate" id="startDate">
+                          <option value=""></option>
+                          <option value="1">xxx</option>
+                          <option value="2">xxx</option>
+                          <option value="3">xxx</option>
+                        </select>
+                      </div>
                     </div>
-                    <div class="fl">
-                      <li>Daily cleaning</li>
-                      <li>Utilities</li>
-                      <li>Mail handling services</li>
+                    <div class="form-group">
+                      <div class="controls">
+                        <label>Engage Period</label>
+                        <select name="engagePeriod" id="engagePeriod">
+                          <option value=""></option>
+                          <option value="1">xxx</option>
+                          <option value="2">xxx</option>
+                          <option value="3">xxx</option>
+                        </select>
+                      </div>
                     </div>
-                  </ul>
+                    <div class="form-group">
+                      <div class="controls">
+                        <label>Location</label>
+                        <select name="location" id="location">
+                          <option value=""></option>
+                          <option value="1">xxx</option>
+                          <option value="2">xxx</option>
+                          <option value="3">xxx</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sumDetails">
+                    <div class="sumDL">
+                      <h3>Studio 3</h3>
+                      <p>
+                      - Location: SS15<br />
+                      - Start Date: 01/09/2018<br />
+                      - 6 months<br />
+                      - Free: 200 credits
+                      </p>
+                    </div>
+                    <div class="sumDR">
+                      <div class="sumMoney">
+                        <span class="curr">RM</span>
+                        <span class="actAm">1600</span>
+                      </div>
+                      <span class="timeSpan">(6 Month x RM 1600)</span>
+                    </div>
+                  </div>
+                  <div class="sumTot">
+                    <span class="totHd fl">Total</span>
+                    <span class="actAm fr"><em>Rm</em>9600</span>
+                  </div>
                 </div>
-              </div>
-              <form class="orderingPaymentForm">
-                <div class="formHeader">
-                  <span class="fl">Payment</span>
-                  <span class="fr">Payment</span>
+                <div class="memberSect">
+                  <div class="sectHd">Member Details (3 Pax) <span class="addMmb"><span class="icon icon-plus"></span>Add member</span></div>
+                  <div class="accordionWrapper">
+                  <div class="accordionItem open">
+                        <h2 class="accordionItemHeading">Member 1</h2>
+                        <span class="icon icon-arrow-down2 accorIc"></span>
+                        <div class="accordionItemContent">
+                          <div class="form-group">
+                            <label for="">Name</label>
+                             <input type="text" name="memberName" class="form-control my-input" id="memberName">
+                          </div>
+                          <div class="form-group">
+                            <label for="">Email Address</label>
+                             <input type="email" name="memberEmail" class="form-control my-input" id="memberEmail">
+                          </div>
+                          <div class="form-group">
+                            <label for="">Contact Number</label>
+                             <input type="text" name="memberContNum" class="form-control my-input" id="memberContNum">
+                          </div>
+                          <div class="form-group">
+                            <label for="">IC NO. / Passport No.</label>
+                             <input type="text" name="memberICNO" class="form-control my-input" id="memberICNO">
+                          </div>
+                          <div class="form-group">
+                            <label for="">Date of Birth</label>
+                              <div class="docs-datepicker memDOB">
+                                <div class="input-group">
+                                  <input type="text" class="form-control docs-date" name="memberDOB" id="memberDOB">
+                                  <span class="icon icon-clock"></span>
+                                </div>
+                                <div class="docs-datepicker-container"></div>
+                              </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <div class="accordionItem close">
+                        <h2 class="accordionItemHeading">Member 2</h2>
+                        <span class="icon icon-arrow-down2 accorIc"></span>
+                        <div class="accordionItemContent">
+                          <div class="form-group">
+                            <label for="">Name</label>
+                             <input type="text" name="memberName" class="form-control my-input" id="memberName">
+                          </div>
+                          <div class="form-group">
+                            <label for="">Email Address</label>
+                             <input type="email" name="memberEmail" class="form-control my-input" id="memberEmail">
+                          </div>
+                          <div class="form-group">
+                            <label for="">Contact Number</label>
+                             <input type="text" name="memberContNum" class="form-control my-input" id="memberContNum">
+                          </div>
+                          <div class="form-group">
+                            <label for="">IC NO. / Passport No.</label>
+                             <input type="text" name="memberICNO" class="form-control my-input" id="memberICNO">
+                          </div>
+                          <div class="form-group">
+                            <label for="">Date of Birth</label>
+                              <div class="docs-datepicker memDOB">
+                                <div class="input-group">
+                                  <input type="text" class="form-control docs-date" name="memberDOB" id="memberDOB">
+                                  <span class="icon icon-clock"></span>
+                                </div>
+                                <div class="docs-datepicker-container"></div>
+                              </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <div class="accordionItem close">
+                        <h2 class="accordionItemHeading">Member 3</h2>
+                        <span class="icon icon-arrow-down2 accorIc"></span>
+                        <div class="accordionItemContent">
+                          <div class="form-group">
+                            <label for="">Name</label>
+                             <input type="text" name="memberName" class="form-control my-input" id="memberName">
+                          </div>
+                          <div class="form-group">
+                            <label for="">Email Address</label>
+                             <input type="email" name="memberEmail" class="form-control my-input" id="memberEmail">
+                          </div>
+                          <div class="form-group">
+                            <label for="">Contact Number</label>
+                             <input type="text" name="memberContNum" class="form-control my-input" id="memberContNum">
+                          </div>
+                          <div class="form-group">
+                            <label for="">IC NO. / Passport No.</label>
+                             <input type="text" name="memberICNO" class="form-control my-input" id="memberICNO">
+                          </div>
+                          <div class="form-group">
+                            <label for="">Date of Birth</label>
+                              <div class="docs-datepicker memDOB">
+                                <div class="input-group">
+                                  <input type="text" class="form-control docs-date" name="memberDOB" id="memberDOB">
+                                  <span class="icon icon-clock"></span>
+                                </div>
+                                <div class="docs-datepicker-container"></div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
                 </div>
-                <div class="formBody">
-                  <div class="form-group">
-                    <label>Card Number</label>
-                    <input type="text" name="cardnumber"  class="form-control my-input" id="cardnumber" placeholder="Card Number">
-                  </div>
-                  <div class="form-group">
-                    <label>Expiry</label>
-                    <input type="text" name="expiry"  class="form-control my-input" id="expiry" placeholder="Expiry">
-                  </div>
-                  <div class="form-group">
-                    <label>CVV</label>
-                    <input type="text" name="cvv"  class="form-control my-input" id="cvv" placeholder="CVV">
-                  </div>
-                </div>
-                <div class="formTotals">
-                  <div class="subTotals">
-                    <span class="fl">SUBTOTAL</span>
-                    <span class="fr">1 Month x 799</span>
-                  </div>
-                  <div class="clearfix"></div>
-                  <div class="completeTotals">
-                    <span class="fl">TOTAL</span>
-                    <span class="fr">799</span>
+                <div class="paymentSect">
+                  <span class="sectHd">Payment Options</span>
+                  <div class="pOpts" data-toggle="buttons">
+                    <div id="op1" class="op">
+                      <div class="opCheck">
+                        <label class="btn btn-default">
+                          <input type="radio" name="options" id="optionCredCard" autocomplete="off">
+                        </label>
+                      </div>
+                      <div class="opImg">
+                        <img src="img/SOS-Icon-18.png" alt="" />
+                        <img src="img/SOS-Icon-19.png" alt="" />
+                      </div>
+                      <div class="opDet">
+                        <span class="opDetHd">CREDIT CARD</span>
+                        <p class="opDetBd">Pay with Visa, MasterCard and debit cards.</p>
+                      </div>
+                    </div>
+                    <div class="op" id="op2">
+                      <div class="opCheck">
+                        <label class="btn btn-default">
+                          <input type="radio" name="options" id="optionCredCard" autocomplete="off">
+                        </label>
+                      </div>
+                      <div class="opImg">
+                        <img src="img/SOS-Icon-20.png" alt="" />
+                      </div>
+                      <div class="opDet">
+                        <span class="opDetHd">PAYPAL</span>
+                        <p class="opDetBd">Pay easily, fast and secure with PayPal.</p>
+                      </div>
+                    </div>
+                    <div id="op3" class="op">
+                      <div class="opCheck">
+                        <label class="btn btn-default">
+                          <input type="radio" name="options" id="optionCredCard" autocomplete="off">
+                        </label>
+                      </div>
+                      <div class="opImg">
+                        <img src="img/SOS-Icon-21.png" alt="" />
+                      </div>
+                      <div class="opDet">
+                        <span class="opDetHd">GRABPAY</span>
+                        <p class="opDetBd">Smart cashless payment with GrabPay.</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="formControls">
@@ -368,7 +515,7 @@
                           I agree to S.O.S’s Terms of Service and Privacy Policy
                       </label>
                   </div>
-                  <button type="submit" class="btn btn-block send-button tx-tfm">Confirm</button>
+                  <button type="submit" class="btn btn-block send-button">Confirm</button>
                 </div>
               </form>
             </div>
@@ -413,7 +560,6 @@
             <img src="img/map.png" alt="" />
           </div>
           </form>
-          
         </div>
       </div>
     </section>
