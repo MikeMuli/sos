@@ -287,7 +287,7 @@
 		});
 
 		$('.popups .overlayPopup').on('click', function(e){
-			$('.loginSignup').addClass('hide');
+			$('.loginSignup, .visitation-confirmation, .signup-confirmation, .resetPass, .resetPassForm, .resetPassConf, .resetPassOk').addClass('hide');
 			$(this).addClass('hide');
 		});
 
@@ -331,7 +331,7 @@
 			$('#loginSwitch').trigger('click');
 		});
 
-		
+
 
       $('.timerange').on('click', function(e) {
 	    e.stopPropagation();
