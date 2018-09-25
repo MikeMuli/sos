@@ -1695,7 +1695,8 @@
      color:#73767c;
 }
  .credhistTable tbody {
-     display: block;
+     display: inline-block;
+     width: 100%;
      margin-top: 20px;
 }
  .convContent .credhistTable tr {
@@ -1719,7 +1720,7 @@
      display: block;
      float: left;
      vertical-align: top;
-     height: 60px;
+     /*height: 60px;*/
      border: 0;
 }
  .convContent .credhistTable tr td:nth-child(1), .convContent .credhistTable tr th:nth-child(1) {
@@ -1739,6 +1740,7 @@
      font-weight: 600;
      text-align: right;
 }
+
  .tabcredTop {
      display: inline-block;
      width: 100%;
@@ -1861,18 +1863,37 @@
 }
  .credhistTable .docs-datepicker {
      display: inline-block;
-     width: 160px;
+     /*width: 220px;*/
+     width: auto;
      vertical-align: middle;
      float: left;
      margin: 0 0.8em;
+     padding: 10px;
+     border: 1px solid #ccc;
 }
+
+.credhistTable .docs-datepicker-container {
+    display: block;
+    float: left;
+}
+
  .credhistTable .docs-datepicker .docs-date {
-     width: 100px;
+     width: 80px;
+     margin-right: 5px;
+     padding: 0 5px;
      font-weight: 600;
      font-size: 0.8em;
+     border-radius: 0;
 }
  .credhistTable .docs-datepicker .input-group {
      float: left;
+}
+.credhistTable .docs-datepicker .to {
+    float: left;
+    font-size: 0.9em;
+    font-weight: 600;
+    padding: 7px 10px;
+    margin-right: 4px;
 }
  .credhistTable .daysPicked, .credhistTable .hrsPicked {
      display: inline-block;
@@ -1882,12 +1903,80 @@
      margin-top: 5px;
      margin-left: 8px;
 }
+ .credhistTable td .chosenDatePicked {
+    display: inline-block;
+    position: relative;
+    border: 1px solid #d8d8d8;
+    padding: 5px 40px 5px 10px;
+    box-shadow: 0 2px 8px 2px #dedede;
+    -webkit-box-shadow: 0 2px 8px 2px #dedede;
+    -moz-box-shadow: 0 2px 8px 2px #dedede;
+ }
+ .credhistTable td .chosenDatePicked span {
+    display: block;
+    float: left;
+ }
+ .credhistTable td .chosenDatePicked span.dateRange, .credhistTable td .chosenDatePicked span.locationRooms, .credhistTable td .chosenDatePicked span.clockDet {
+    font-size: 12.5px;
+    float: left;
+    line-height: 1.5em;
+    padding: 0 5px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+ }
+ .credhistTable td .chosenDatePicked span:nth-child(3), .credhistTable td .chosenDatePicked span:nth-child(5) {
+    clear: both;
+    margin-top: 8px;
+ }
+ .credhistTable td .chosenDatePicked span.locationRooms, .credhistTable td .chosenDatePicked span.clockDet {
+    margin-top: 7px;
+ }
+ .credhistTable td .chosenDatePicked .choseDPL {
+    float: left;
+ }
+ .credhistTable td .chosenDatePicked .choseDPR {
+    float: right;
+    position: absolute;
+    color: #c3272f;
+    padding-left: 4px;
+    border-left: 1px solid #bbb;
+    top: 50%;
+    right: 0;
+    height: 80%;
+    width: 25px;
+    padding-top: 5.5%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    cursor: pointer;
+ }
+ .credhistTable td .chosenDatePicked .choseDPR .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+ }
  .credhistTable td .checkbox {
      display: block;
      float: left;
      margin-left: 20px;
 }
  .credhistTable td .checkbox .checkboxLckr {
+}
+.credhistTable td .checkbox label {
+    display: block;
+    margin-top: -10px;
+    font-size: 1.3em;
+}
+.credhistTable td .checkbox label em {
+    color: #173a5f;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 0.6em;
+    font-weight: 600;
+    padding-left: 0.5em;
 }
  .docs-datepicker .docs-date {
      cursor: pointer;

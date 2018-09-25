@@ -393,6 +393,20 @@
 			$(this).addClass('active');
 		});
 
+		$('.facilitiesDiv .facBookTab #conTab').on('click', function() {
+			$(this).siblings().removeClass('active');
+			$(this).addClass('active');
+			$('.facBookCont .convContent').removeClass('hide');
+			$('.facBookCont .rmContent').addClass('hide');
+		});
+
+		$('.facilitiesDiv .facBookTab #hisTab').on('click', function() {
+			$(this).siblings().removeClass('active');
+			$(this).addClass('active');
+			$('.facBookCont .convContent').addClass('hide');
+			$('.facBookCont .rmContent').removeClass('hide');
+		});
+
 		var accItem = document.getElementsByClassName('accordionItem');
 	    var accHD = document.getElementsByClassName('accordionItemHeading');
 	    var i;

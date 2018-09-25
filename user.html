@@ -118,7 +118,7 @@
             </div>
           </div>
 
-          <div class="creditDiv">
+          <div class="creditDiv hide">
             <div class="col-md-12 probootstrap-section-heading nopdlr">
               <h2 class="mb30 text-left probootstrap-user-heading">Credit</h2>
             </div>
@@ -289,40 +289,40 @@
             </div>
           </div>
  
-          <form class="facilitiesDiv hide" method="post">
+          <form class="facilitiesDiv" method="post">
             <div class="col-md-12 probootstrap-section-heading nopdlr">
               <h2 class="mb30 text-left probootstrap-user-heading">Facilities Booking</h2>
             </div>
             <div class="col-md-12 bkBd nopdlr">
               <div class="facBookTab">
-                <a href="#" id="conTab" class="fl">Convenient</a>
-                <a href="#" id="rmTab" class="active">Rooms</a>
-                <a href="#" id="hisTab" class="fr">History</a>
+                <a href="#" id="conTab" class="fl active">Booking Convenience</a>
+                <a href="#" id="hisTab">Booking History</a>
               </div>
               <div class="facBookCont">
-                <div class="convContent hide">
+                <div class="convContent">
                   <table class="table table-striped credhistTable">
-                    <thead>
-                        <tr>
-                           <th>ITEM</th>
-                           <th>TYPE</th>
-                           <th><span class="icon icon-plus"></th>
-                        </tr>
-                     </thead>
                      <tr>
-                        <td><div class="checkbox">
-                                <input class="checkboxLckr" type="checkbox" checked>
-                            </div>
-                            Locker</td>
                         <td>
-                          <label class="switch">
-                            <input type="checkbox" checked>
-                            <span class="slider round"></span>
-                            <span class="absolute-no">Monthly</span>
-                          </label>
+                            <div class="checkbox">
+                                <input class="checkboxLckr" type="checkbox" id="locker" checked>
+                                <label for="locker">Locker<em>(2 credits/day)</em></label>
+                            </div>
+                            <div class="chosenDatePicked">
+                              <div class="choseDPL">
+                                <span class="icon icon-calendar"></span><span class="dateRange">20 AUG 2018 - 20 AUG 2018</span>
+                                <span class="icon icon-location2"></span><span class="locationRooms">SOS1 - SS15</span>
+                              </div>
+                              <div class="choseDPR">
+                                <span class="icon icon-cross"></span>
+                              </div>
+                            </div>
+                        </td>
+                        <td>
                           <div class="docs-datepicker">
                              <div class="input-group">
-                                <input type="text" class="form-control docs-date" name="date" placeholder="Date">
+                                <input type="text" class="form-control docs-date date1" name="date" placeholder="From:">
+                                <span class="to">to</span>
+                                <input type="text" class="form-control docs-date date2" name="date" placeholder="To:">
                                 <span class="daysPicked">1 day</span>
                              </div>
                              <div class="docs-datepicker-container"></div>
@@ -332,29 +332,35 @@
                      </tr>
                      <tr>
                         <td>
-                            <div class="checkbox">
-                                <input class="checkboxConf" type="checkbox" checked>
+                          <div class="checkbox">
+                                <input class="checkboxConf" type="checkbox" id="conference" checked>
+                                <label for="conference">Conference room <em>(2 credits/day)</em></label>
                             </div>
-                          Conference room</td>
+                            <div class="chosenDatePicked">
+                              <div class="choseDPL">
+                                <span class="icon icon-calendar"></span><span class="dateRange">20 AUG 2018 - 20 AUG 2018</span>
+                                <span class="icon icon-clock"></span><span class="clockDet">11AM - 2PM</span>
+                                <span class="icon icon-location2"></span><span class="locationRooms">SOS1 - SS15</span>
+                              </div>
+                              <div class="choseDPR">
+                                <span class="icon icon-cross"></span>
+                              </div>
+                            </div>
+                        </td>
                         <td>
-                          <label class="switch">
-                            <input type="checkbox" checked>
-                            <span class="slider round"></span>
-                            <span class="absolute-no">Monthly</span>
-                          </label>
                           <div class="docs-datepicker">
                               <div class="input-group">
-                                <input type="text" class="form-control docs-date" name="date" placeholder="Date">
+                                <input type="text" class="form-control docs-date date1" name="date" placeholder="Date">
                               </div>
                               <div class="docs-datepicker-container"></div>
                               <span class="daysPicked">1 day</span>
-                          </div>
-                          <div id="datetimepickerDate" class="timerange">
-                            <div class="input-group">
-                              <input type="text" class="form-control timePicked" name="time" placeholder="Time">
-                              <span class="timeClock icon icon-clock"></span>
-                            </div>
-                            <span class="hrsPicked">1 Hour</span>
+                              <div id="datetimepickerDate" class="timerange">
+                                <div class="input-group">
+                                  <input type="text" class="form-control timePicked" name="time" placeholder="Time">
+                                  <span class="timeClock icon icon-clock"></span>
+                                </div>
+                                <span class="hrsPicked">1 Hour</span>
+                              </div>
                           </div>
                         </td>
                         <td>10 CREDITS</td>
@@ -369,7 +375,7 @@
                       </tr>
                   </table>
                 </div>
-                <div class="rmContent">
+                <div class="rmContent hide">
                   <div class="rmFifLeft">
                       <div class="rmFifTabs">
                         <a href="#" id="tabs1" class="active">Upcoming</a>
@@ -496,8 +502,8 @@
         </div>
         <ul class="listNavDets">
           <li><a href="#" id="profileTap"><img src="img/icon-13.png" alt="" /> My Profile</a></li>
-          <li><a href="#" id="creditTap" class="active"><img src="img/icon-14.png" alt="" /> Credit<span class="usrRemCred"></span></a></li>
-          <li><a href="#" id="facilitiesTap"><img src="img/icon-15.png" alt="" /> Facilities Booking</a></li>
+          <li><a href="#" id="creditTap"><img src="img/icon-14.png" alt="" /> Credit<span class="usrRemCred"></span></a></li>
+          <li><a href="#" id="facilitiesTap" class="active"><img src="img/icon-15.png" alt="" /> Facilities Booking</a></li>
         </ul>
         <div class="logOut">
           <a href="#"><img src="img/" alt="" />Log Out</a>
@@ -538,6 +544,7 @@
     <script src="js/scripts.min.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
     <script src="js/main.js"></script>
 
   </body>
