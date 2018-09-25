@@ -61,7 +61,7 @@
                     </div>
                     <div class="form-group">
                       <label>Date of Birth</label>
-                      <input type="text" name="DOB"  class="form-control my-input" id="dob" placeholder="D.O.B" disabled>
+                      <input type="text" name="DOB"  class="form-control my-input docs-date" id="dob" placeholder="D.O.B" disabled>
                     </div>
                     <div class="form-group">
                       <label>Interest In</label>
@@ -472,16 +472,32 @@
     </section>
 
     <div class="popups">
-      <div class="visitation-confirmation hide">
+      <div class="profUpdated hide">
         <div id="popClose"><span class="icon icon-cross"></span></div>
         <div class="pop-upBdy">
-          <div id="popMail"><span class="icon icon-envelop"></span></div>
-          <h3>Visitation - Confirmation</h3>
-          <p>Thank you for your interest!</p>
-          <p>We have sent the confirmation details to your email <span class="confEm">test@gmail.com</span></p>
-          <p>Looking forward to seeing you on <span class="confDte">20/08/2018 2:00pm</span>
-          <a href="#" id="okBtn">Ok</a>
+        <div><img src="img/SOS-Icon-17.png"></div>
+        <h3>Success</h3>
+        <div class="pG">
+          <p>
+            Your profile has been updated
+          </p>
         </div>
+        <a href="#" id="okBtn">Ok</a>
+      </div>
+      </div>
+
+      <div class="profIncomp hide">
+        <div id="popClose"><span class="icon icon-cross"></span></div>
+        <div class="pop-upBdy">
+        <div><img src="img/SOS-Icon-16.png"></div>
+        <h3>Opps!</h3>
+        <div class="pG">
+          <p>
+            Please <a href="#">complete your profile</a> to continue
+          </p>
+        </div>
+        <a href="#" id="okBtn">Ok</a>
+      </div>
       </div>
       <div class="overlayPopup hide"></div>
     </div>

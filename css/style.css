@@ -2204,7 +2204,7 @@
      bottom: 0;
      z-index: 200;
 }
- .popups .visitation-confirmation, .popups .loginSignup, .signup-confirmation, .resetPass , .resetPassConf, .resetPassForm, .resetPassOk {
+ .popups .visitation-confirmation, .popups .loginSignup, .signup-confirmation, .resetPass , .resetPassConf, .resetPassForm, .resetPassOk, .profUpdated, .profIncomp {
      display: block;
      position: fixed;
      top: 50%;
@@ -2218,18 +2218,18 @@
      box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
      z-index: 201;
 }
- .popups .visitation-confirmation #popClose , .signup-confirmation #popClose, .resetPass #popClose, .resetPassConf #popClose, .resetPassForm #popClose, .resetPassOk #popClose {
+ .popups .visitation-confirmation #popClose , .signup-confirmation #popClose, .resetPass #popClose, .resetPassConf #popClose, .resetPassForm #popClose, .resetPassOk #popClose, .profUpdated #popClose, .profIncomp #popClose {
      position: absolute;
      font-size: 1.5em;
      top: 10px;
      right: 5px;
      cursor: pointer;
 }
- .popups .visitation-confirmation .pop-upBdy, .popups .signup-confirmation .pop-upBdy, .resetPass .pop-upBdy , .resetPassConf .pop-upBdy, .resetPassForm .pop-upBdy, .resetPassOk .pop-upBdy {
+ .popups .visitation-confirmation .pop-upBdy, .popups .signup-confirmation .pop-upBdy, .resetPass .pop-upBdy , .resetPassConf .pop-upBdy, .resetPassForm .pop-upBdy, .resetPassOk .pop-upBdy, .profUpdated .pop-upBdy, .profIncomp .pop-upBdy {
      padding: 20px;
      text-align: center;
 }
- .popups .visitation-confirmation .pop-upBdy h3, .signup-confirmation .pop-upBdy h3, .resetPass .pop-upBdy h3, .resetPassConf h3, .resetPassForm h3, .resetPassOk h3 {
+ .popups .visitation-confirmation .pop-upBdy h3, .signup-confirmation .pop-upBdy h3, .resetPass .pop-upBdy h3, .resetPassConf h3, .resetPassForm h3, .resetPassOk h3, .profUpdated h3, .profIncomp h3 {
      color: #c3272f;
      font-size: 24px;
      font-weight: 800;
@@ -2251,6 +2251,7 @@
  .signup-confirmation .pop-upBdy #popConf img, .resetPassConf img, .resetPassOk img {
      max-width: 150px;
 }
+.profUpdated img, .profIncomp img { max-width: 100px; }
  .signup-confirmation .tips {
      position: relative;
      padding: 25px 20px 10px;
@@ -2280,7 +2281,7 @@
      font-size: 4em;
      margin-bottom: 5px;
 }
- .popups .visitation-confirmation .pop-upBdy #okBtn, .resetPassConf #okBtn, .resetPassForm #okBtn, .resetPassOk #okBtn {
+ .popups .visitation-confirmation .pop-upBdy #okBtn, .resetPassConf #okBtn, .resetPassForm #okBtn, .resetPassOk #okBtn, .profUpdated #okBtn, .profIncomp #okBtn {
      display: inline-block;
      background: #c3272f;
      color: #fff;
@@ -2388,24 +2389,25 @@
      color: #fff;
      text-transform: uppercase;
 }
- .resetPassConf #okBtn, .resetPassForm #okBtn {
+ .resetPassConf #okBtn, .resetPassForm #okBtn, .profUpdated #okBtn, .profIncomp #okBtn {
      text-transform: uppercase;
 }
- .resetPassConf .pG p {
+ .resetPassConf .pG p, .profUpdated .pG p, .profIncomp .pG p {
      line-height: 1.2em;
      margin-bottom: 15px;
 }
- .resetPassConf .pG p span {
+ .resetPassConf .pG p span, .profUpdated .pG p span, .profIncomp .pG p span {
      display: block;
      font-weight: 600;
 }
  .resetPassOk p {
      margin-bottom: 20px;
 }
- .resetPassOk #restLogin {
+ .resetPassOk #restLogin , .profIncomp .pG a {
      display: inline-block;
      color: #c3272f;
      font-style: italic;
+     text-decoration: underline;
 }
  .memberSect .accordionWrapper{
      padding: 10px 10px;

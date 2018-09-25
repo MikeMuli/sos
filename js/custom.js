@@ -346,7 +346,7 @@
 			e.preventDefault();
 			$(this).parents('.basicInfo, .privacyInfo, .membershipInfo').find('.editFx').removeClass('hide');
 			$(this).parents('.basicInfo, .privacyInfo, .membershipInfo').find('.send-button').addClass('hide');
-			$(this).parents('.basicInfo, .privacyInfo, .membershipInfo').find('input').addAttr('disabled');
+			$(this).parents('.basicInfo, .privacyInfo, .membershipInfo').find('input').attr('disabled','disabled');
 		});
 
 		var accItem = document.getElementsByClassName('accordionItem');
