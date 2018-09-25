@@ -1291,6 +1291,7 @@
      border-bottom: 1px solid #dadada;
 }
  .backendNav .userPic {
+     position: relative;
      display: inline-block;
      background: #bbb;
      margin: 0 10px auto 0;
@@ -1300,6 +1301,16 @@
      border-radius: 50%;
      -webkit-border-radius: 50%;
      -moz-border-radius: 50%;
+}
+.backendNav .userPic img {
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);    
 }
  .backendNav .userName {
      display: inline-block;
@@ -1418,6 +1429,7 @@
      border: 0;
      border-radius: 0;
      box-shadow: none;
+     cursor: initial;
 }
  .backend .bkBd .bkInner {
      display: inline-block;
@@ -1436,16 +1448,27 @@
      margin-bottom: 1em;
 }
  .backend .bkBd .bkInner .userPic .picImg {
+     position: relative;
      background: #bbb;
      display: inline-block;
-     width: 6em;
-     height: 6em;
+     width: 7em;
+     height: 7em;
      margin-bottom: 1em;
      border-radius: 50%;
      -webkit-border-radius: 50%;
      -moz-border-radius: 50%;
 }
- .backend .bkBd .bkInner .userPic .editFx {
+.backend .bkBd .bkInner .userPic .picImg img {
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);    
+}
+.backend .bkBd .bkInner .userPic .editFx {
      display: block;
      position: relative;
      margin: 5px auto;

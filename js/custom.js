@@ -336,6 +336,19 @@
 			$('.orderRow').removeClass('hide');
 		});
 
+		$('.editFx').on('click', function(){
+			$(this).addClass('hide');
+			$(this).parents('.basicInfo, .privacyInfo, .membershipInfo').find('.send-button').removeClass('hide');
+			$(this).parents('.basicInfo, .privacyInfo, .membershipInfo').find('input').removeAttr('disabled');
+		});
+
+		$('.basicInfo, .privacyInfo, .membershipInfo').find('.send-button').on('click', function(e){
+			e.preventDefault();
+			$(this).parents('.basicInfo, .privacyInfo, .membershipInfo').find('.editFx').removeClass('hide');
+			$(this).parents('.basicInfo, .privacyInfo, .membershipInfo').find('.send-button').addClass('hide');
+			$(this).parents('.basicInfo, .privacyInfo, .membershipInfo').find('input').addAttr('disabled');
+		});
+
 		var accItem = document.getElementsByClassName('accordionItem');
 	    var accHD = document.getElementsByClassName('accordionItemHeading');
 	    var i;
