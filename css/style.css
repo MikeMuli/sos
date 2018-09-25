@@ -2151,6 +2151,74 @@
      margin-top: 0.8em;
      font-weight: 600;
 }
+
+.summaryTableDiv {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.summaryTableDiv .summaryHd {     
+    display: block;
+    background: #73767c;
+    padding: 8px 20px;
+    margin-bottom: 30px;
+    color: #fff;
+    text-transform: uppercase;
+}   
+
+.summaryTableDiv .summaryRow {
+    display: block;
+    float: left;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    clear: both;
+}
+
+.summaryTableDiv .summaryRow span {
+    display: block;
+    float: left;
+    font-size: 0.8em;
+    font-weight: 600;
+    clear: both;
+}
+
+.summaryTableDiv .summaryRow span.icon {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.summaryTableDiv .summaryRow span.prodName {
+    font-size: 1.2em;
+    color: #173a5f;
+}
+
+.summaryTableDiv .summaryRow span.cred {
+    font-size: 1em;
+    color: #173a5f;
+}
+
+.summaryTableDiv .summaryRow span.cred em {
+    font-size: 0.9em;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.summaryTableDiv .summaryTotalRow {
+    display: inline-block;
+    width: 100%;
+    margin-top: 1em;
+    font-size: 1.05em;
+    font-weight: 600;
+    color: #173a5f;   
+}
+
+.summaryTableDiv .summaryTotalRow span {
+    text-transform: uppercase;
+}
+
  .probootstrap-form {
      margin-bottom: 0px;
      padding: 40px 0;

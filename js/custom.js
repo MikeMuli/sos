@@ -407,6 +407,16 @@
 			$('.facBookCont .rmContent').removeClass('hide');
 		});
 
+		$('.credhistTable .send-button').on('click', function(e){
+			e.preventDefault();
+			$('.credhistTable tr').each(function(){
+				if(!$(this).hasClass('totalRow')){
+					$(this).addClass('hide');
+				}
+			});
+			$('.summaryTableDiv').removeClass('hide');
+		});
+
 		var accItem = document.getElementsByClassName('accordionItem');
 	    var accHD = document.getElementsByClassName('accordionItemHeading');
 	    var i;
