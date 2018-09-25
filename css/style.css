@@ -1031,47 +1031,47 @@
     padding: 30px 0 15px;
 }
 
-.productOrderingForm .paymentSect .pOpts .op {
+.productOrderingForm .paymentSect .pOpts .op, .chspayList .pOpts .op {
     display: inline-block;
     width: calc(33.333% - 5px);
     text-align: center;
 }
 
-.productOrderingForm .paymentSect .pOpts .op .opCheck, .productOrderingForm .paymentSect .pOpts .op .opImg, .productOrderingForm .paymentSect .pOpts .op .opDet {
+.productOrderingForm .paymentSect .pOpts .op .opCheck, .productOrderingForm .paymentSect .pOpts .op .opImg, .productOrderingForm .paymentSect .pOpts .op .opDet, .chspayList .pOpts .op .opCheck, .chspayList .pOpts .op .opImg, .chspayList .pOpts .op .opDet {
     display: inline-block;
     vertical-align: top;
 }   
 
-.productOrderingForm .paymentSect .pOpts .op .opCheck {
+.productOrderingForm .paymentSect .pOpts .op .opCheck, .chspayList .pOpts .op .opCheck {
     width: 15%;
 }
-.productOrderingForm .paymentSect .pOpts .op .opCheck .btn {
+.productOrderingForm .paymentSect .pOpts .op .opCheck .btn, .chspayList .pOpts .op .opCheck .btn {
     padding: 15px 20px;
     background: transparent;
     border: 0;
 }
-.productOrderingForm .paymentSect .pOpts .op .opCheck .btn.active {
+.productOrderingForm .paymentSect .pOpts .op .opCheck .btn.active, .chspayList .pOpts .op .opCheck .btn.active {
     box-shadow: none;
 }
-.productOrderingForm .paymentSect .pOpts .op .opImg {
+.productOrderingForm .paymentSect .pOpts .op .opImg, .chspayList .pOpts .op .opImg {
     width: 15%;
 }
-.productOrderingForm .paymentSect .pOpts .op .opImg img {
+.productOrderingForm .paymentSect .pOpts .op .opImg img, .chspayList .pOpts .op .opImg img {
     display: inline-block;
     width: 100%;
 }
-.productOrderingForm .paymentSect .pOpts .op .opDet {
+.productOrderingForm .paymentSect .pOpts .op .opDet, .chspayList .pOpts .op .opDet {
     width: calc(70% - 10px);
     text-align: left;
 }
 
-.productOrderingForm .paymentSect .pOpts .op .opDet span.opDetHd {
+.productOrderingForm .paymentSect .pOpts .op .opDet span.opDetHd, .chspayList .pOpts .op .opDet span.opDetHd {
     display: block;
     color: #173a5f;
     font-weight: 600;
 }
 
-.productOrderingForm .paymentSect .pOpts .op .opDet p.opDetBd {
+.productOrderingForm .paymentSect .pOpts .op .opDet p.opDetBd, .chspayList .pOpts .op .opDet p.opDetBd {
     font-size: 0.9em;
     line-height: 1.2em;
     margin-bottom: 0;
@@ -1338,7 +1338,17 @@
      text-transform: uppercase;
 }
  .backendNav .listNavDets li a:hover {
+     color: #c3272f;    
      border-left: 5px solid #c3272f;
+}
+.backendNav .listNavDets li a.active {
+     font-weight: 600;
+     color: #c3272f;    
+     border-left: 5px solid #c3272f;
+}
+.backendNav .listNavDets li a.active img {
+     -webkit-filter: none;
+     filter: none;
 }
  .backendNav .listNavDets li img {
      width: 48px;
@@ -1561,13 +1571,17 @@
  .backend .creditDiv .tabTpHd i {
      font-style: normal;
      font-size: 0.8em;
+     text-transform: capitalize;
 }
  .backend .creditDiv .credOptionList {
      display: inline-block;
      width: 100%;
      margin-top: 2em;
-     text-align: center;
+     text-align: left;
 }
+ .backend .creditDiv .credOptionList .credOption {
+     text-align: center;
+ }
  .backend .creditDiv .credOptionList .credOption, .backend .payListOption {
      display: inline-block;
      background: #eee;
@@ -1584,14 +1598,16 @@
      color: #c3272f;
 }
  .backend .creditDiv .credOptionList .credOption .curr {
-     font-size: 0.65em;
+     font-size: 0.85em;
 }
  .backend .creditDiv .credOptionList .credOption .amn {
+     display: inline-block;
 }
  .backend .creditDiv .credOptionList .credOption .xdets {
      display: inline-block;
      width: 100%;
-     font-size: 0.4em;
+     margin-top: 0.8em;
+     font-size: 0.45em;
      font-style: italic;
 }
  .chsPayment, .payPalForm{
@@ -1640,7 +1656,12 @@
      margin-left: -20px;
      padding: 0 20px;
 }
+ .credhistTable tr {
+    display: inline-block;
+    width: 100%;
+ }
  .tabCredHistory .credhistTable tr th {
+     display: inline-block;
      color: #173a5f;
      font-weight: 600;
      text-align: center;
@@ -1652,6 +1673,19 @@
      font-weight: 600;
      vertical-align: middle;
 }
+
+ .tabCredHistory .credhistTable tr th:nth-child(1) { width: 10%; }
+ .tabCredHistory .credhistTable tr th:nth-child(2) { width: 20%; }
+ .tabCredHistory .credhistTable tr th:nth-child(3) { width: 28%; }
+ .tabCredHistory .credhistTable tr th:nth-child(4) { width: 30%; }
+ .tabCredHistory .credhistTable tr th:nth-child(5) { width: 10%; }
+
+ .tabCredHistory .credhistTable tr td:nth-child(1) { width: 10%; }
+ .tabCredHistory .credhistTable tr td:nth-child(2) { width: 20%; padding-left: 28px; }
+ .tabCredHistory .credhistTable tr td:nth-child(3) { width: 30%; padding-left: 25px; }
+ .tabCredHistory .credhistTable tr td:nth-child(4) { width: 30%; padding-left: 25px; }
+ .tabCredHistory .credhistTable tr td:nth-child(5) { width: 10%; padding-right: 2px; }
+
  .tabCredHistory .credhistTable tr td:nth-child(5) a {
      background: transparent;
      border-color: transparent;

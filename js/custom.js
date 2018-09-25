@@ -349,6 +349,50 @@
 			$(this).parents('.basicInfo, .privacyInfo, .membershipInfo').find('input').attr('disabled','disabled');
 		});
 
+		/* Switches in User Profile */
+		$('#profileTap').on('click', function(){
+			$('.profileDiv').removeClass('hide');
+			$('.creditDiv').addClass('hide');
+			$('.facilitiesDiv').addClass('hide');
+			$(this).parent().siblings().children('a').removeClass('active');
+			$(this).addClass('active');
+		});
+
+		$('#creditTap').on('click', function(){
+			$('.profileDiv').addClass('hide');
+			$('.creditDiv').removeClass('hide');
+			$('.facilitiesDiv').addClass('hide');
+			$(this).parent().siblings().children('a').removeClass('active');
+			$(this).addClass('active');
+		});
+
+		$('#facilitiesTap').on('click', function(){
+			$('.profileDiv').addClass('hide');
+			$('.creditDiv').addClass('hide');
+			$('.facilitiesDiv').removeClass('hide');
+			$(this).parent().siblings().children('a').removeClass('active');
+			$(this).addClass('active');
+		});
+
+		$('.creditDiv .tabs #tab1').on('click', function(){
+			$(this).siblings().removeClass('active');
+			$(this).addClass('active');
+			$('.creditDiv .tabsContent .tabTopUpCred').removeClass('hide');
+			$('.creditDiv .tabsContent .tabCredHistory').addClass('hide');
+		});
+
+		$('.creditDiv .tabs #tab2').on('click', function(){
+			$(this).siblings().removeClass('active');
+			$(this).addClass('active');
+			$('.creditDiv .tabsContent .tabCredHistory').removeClass('hide');
+			$('.creditDiv .tabsContent .tabTopUpCred').addClass('hide');
+		});
+
+		$('.credOptionList .credOption').on('click', function() {
+			$(this).siblings().removeClass('active');
+			$(this).addClass('active');
+		});
+
 		var accItem = document.getElementsByClassName('accordionItem');
 	    var accHD = document.getElementsByClassName('accordionItemHeading');
 	    var i;

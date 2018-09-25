@@ -27,7 +27,7 @@
     <section class="probootstrap-section backend fl">
       <div class="container">
         <div class="row">
-          <div class="profileDiv">
+          <div class="profileDiv hide">
             <div class="col-md-12 probootstrap-section-heading nopdlr">
               <h2 class="mb30 text-left probootstrap-user-heading">My Profile</h2>
             </div>
@@ -118,7 +118,7 @@
             </div>
           </div>
 
-          <div class="creditDiv hide">
+          <div class="creditDiv">
             <div class="col-md-12 probootstrap-section-heading nopdlr">
               <h2 class="mb30 text-left probootstrap-user-heading">Credit</h2>
             </div>
@@ -131,47 +131,84 @@
             </div>
             <div class="col-md-12 bkBd nopdlr">
               <div class="tabs">
-                <a href="#" id="#tab1">Top-Up Credit</a>
-                <a href="#" id="#tab2" class="active">Credit History</a>
+                <a href="#" id="tab1" class="active">Top-Up Credit</a>
+                <a href="#" id="tab2">Credit History</a>
               </div>
               <div class="tabsContent">
-                <div class="tabTopUpCred hide">
+                <div class="tabTopUpCred">
                   <span class="tabTpHd">
                     TOP UP AMOUNT<br/><i>(RM1=1 Credit)</i>
                   </span>
                   <div class="credOptionList">
                     <div class="credOption active">
-                      <span class="curr">RM</span>
                       <span class="amn">20</span>
-                      <span class="xdets">(20 Credits)</span>
+                      <span class="xdets">(<em class="curr">RM</em> 20 Credits)</span>
                     </div>
                     <div class="credOption">
-                      <span class="curr">RM</span>
-                      <span class="amn">50</span>
-                      <span class="xdets">(55 Credits)</span>
+                      <span class="amn">55</span>
+                      <span class="xdets">(<em class="curr">RM</em> 55 Credits)</span>
                     </div>
                     <div class="credOption">
-                      <span class="curr">RM</span>
-                      <span class="amn">100</span>
-                      <span class="xdets">(120 Credits)</span>
+                      <span class="amn">120</span>
+                      <span class="xdets">(<em class="curr">RM</em> 120 Credits)</span>
                     </div>
-                    <div class="credOption">
-                      <span class="curr">other amount</span>
-                    </div>                    
                   </div>
                   <div class="chsPayment">
                     <span class="chsPaymentHd">
                       Choose Payment Method
                     </span>
                     <div class="chspayList">
-                      <div class="payListOption active">
-                        <span class="payCred"><img src="img/icon-13.png" alt="" /></span>
-                      </div>
-                      <div class="payListOption">
-                        <span class="payPaypal"><img src="img/icon-13.png" alt="" /></span>
+                      <div class="pOpts" data-toggle="buttons">
+                        <div id="op1" class="op">
+                          <div class="opCheck">
+                            <label class="btn btn-default">
+                              <input type="radio" name="options" id="optionCredCard" autocomplete="off">
+                            </label>
+                          </div>
+                          <div class="opImg">
+                            <img src="img/SOS-Icon-18.png" alt="" />
+                            <img src="img/SOS-Icon-19.png" alt="" />
+                          </div>
+                          <div class="opDet">
+                            <span class="opDetHd">CREDIT CARD</span>
+                            <p class="opDetBd">Pay with Visa, MasterCard and debit cards.</p>
+                          </div>
+                        </div>
+                        <div class="op" id="op2">
+                          <div class="opCheck">
+                            <label class="btn btn-default">
+                              <input type="radio" name="options" id="optionCredCard" autocomplete="off">
+                            </label>
+                          </div>
+                          <div class="opImg">
+                            <img src="img/SOS-Icon-20.png" alt="" />
+                          </div>
+                          <div class="opDet">
+                            <span class="opDetHd">PAYPAL</span>
+                            <p class="opDetBd">Pay easily, fast and secure with PayPal.</p>
+                          </div>
+                        </div>
+                        <div id="op3" class="op">
+                          <div class="opCheck">
+                            <label class="btn btn-default">
+                              <input type="radio" name="options" id="optionCredCard" autocomplete="off">
+                            </label>
+                          </div>
+                          <div class="opImg">
+                            <img src="img/SOS-Icon-21.png" alt="" />
+                          </div>
+                          <div class="opDet">
+                            <span class="opDetHd">GRABPAY</span>
+                            <p class="opDetBd">Smart cashless payment with GrabPay.</p>
+                          </div>
+                        </div>
+                        <div class="form-group mt50 fr text-right">
+                          <button type="submit" class=" btn btn-block send-button tx-tfm">Next</button>
+                        </div>
                       </div>
                     </div>
-                    <div class="payOption">
+                  </div>
+                  <div class="payOption hide">
                       <form class="payCredForm">
                         <div class="form-group">
                             <label for="CardHolder">Card Holder</label>
@@ -208,15 +245,11 @@
                             <label for="PayPass">Password</label>
                             <input type="password" name="Password" class="form-control my-input" id="PayPass" placeholder="Password">
                         </div>
-                        <div class="form-group mt20 fr text-right">
-                          <button type="submit" class=" btn btn-block send-button tx-tfm">Next</button>
-                        </div>
                       </form>
                     </div>
-                  </div>
                 </div>
 
-                <div class="tabCredHistory">
+                <div class="tabCredHistory hide">
                   <div class="tabcredTop">
                     <select class="selectCredList" id="">
                         <option>Today</option>
@@ -462,9 +495,9 @@
           </span>              
         </div>
         <ul class="listNavDets">
-          <li><a href="#"><img src="img/icon-13.png" alt="" /> My Profile</a></li>
-          <li><a href="#"><img src="img/icon-14.png" alt="" /> Credit<span class="usrRemCred"></span></a></li>
-          <li><a href="#"><img src="img/icon-15.png" alt="" /> Facilities Booking</a></li>
+          <li><a href="#" id="profileTap"><img src="img/icon-13.png" alt="" /> My Profile</a></li>
+          <li><a href="#" id="creditTap" class="active"><img src="img/icon-14.png" alt="" /> Credit<span class="usrRemCred"></span></a></li>
+          <li><a href="#" id="facilitiesTap"><img src="img/icon-15.png" alt="" /> Facilities Booking</a></li>
         </ul>
         <div class="logOut">
           <a href="#"><img src="img/" alt="" />Log Out</a>
