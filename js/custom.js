@@ -302,6 +302,16 @@
 			$('.resetPass').removeClass('hide');
 		});
 
+		$('.loginAcb .send-button').on('click', function(e){
+			e.preventDefault();
+			window.location.href = "user.html";
+		});
+
+		$('.backendNav .logOut a').on('click', function(e){
+			e.preventDefault();
+			window.location.href = "index.html";
+		});
+
 		$('.resetPass .send-button').on('click', function(e){
 			e.preventDefault();
 			$('.resetPass').addClass('hide');

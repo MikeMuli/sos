@@ -1957,6 +1957,18 @@
      margin-top: 5px;
      margin-left: 8px;
 }
+ .credhistTable .addBtn {
+    display: inline-block;
+    float: right;
+    margin-left: 15px;
+    padding: 8px 20px;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    font-weight: 600;
+    background: #c3272f;
+    color: #fff;
+    text-transform: uppercase;
+ }
  .credhistTable td .chosenDatePicked {
     display: inline-block;
     position: relative;
