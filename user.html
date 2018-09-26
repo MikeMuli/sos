@@ -27,7 +27,7 @@
     <section class="probootstrap-section backend fl">
       <div class="container">
         <div class="row">
-          <div class="profileDiv hide">
+          <div class="profileDiv">
             <div class="col-md-12 probootstrap-section-heading nopdlr">
               <h2 class="mb30 text-left probootstrap-user-heading">My Profile</h2>
             </div>
@@ -333,7 +333,7 @@
             </div>
           </div>
  
-          <form class="facilitiesDiv" method="post">
+          <form class="facilitiesDiv hide" method="post">
             <div class="col-md-12 probootstrap-section-heading nopdlr">
               <h2 class="mb30 text-left probootstrap-user-heading">Facilities Booking</h2>
             </div>
@@ -601,16 +601,6 @@
               </div>
             </div>
           </form>
-
-          <div class="invoiceDiv hide">
-            <div class="col-md-12 probootstrap-section-heading nopdlr">
-              <h2 class="mb30 text-left probootstrap-user-heading">Invoice History</h2>
-            </div>
-            <div class="col-md-12 bkBd nopdlr">
-              
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
@@ -625,14 +615,113 @@
           </span>              
         </div>
         <ul class="listNavDets">
-          <li><a href="#" id="profileTap"><img src="img/icon-13.png" alt="" /> My Profile</a></li>
+          <li><a href="#" id="profileTap" class="active"><img src="img/icon-13.png" alt="" /> My Profile</a></li>
           <li><a href="#" id="creditTap"><img src="img/icon-14.png" alt="" /> Credit<span class="usrRemCred"></span></a></li>
-          <li><a href="#" id="facilitiesTap" class="active"><img src="img/icon-15.png" alt="" /> Facilities Booking</a></li>
+          <li><a href="#" id="facilitiesTap"><img src="img/icon-15.png" alt="" /> Facilities Booking</a></li>
         </ul>
         <div class="logOut">
           <a href="#"><span class="icon icon-exit"></span>Log Out</a>
         </div>
     </section>
+
+    <section class="probootstrap-section merchantOne hide">
+      <h2>Merchant One</h2>
+      <div class="paymentDetails hide">
+        <span class="pDHd">Mandatory felds marked by *</span>
+        <span class="paymDetHd">Payment Details</span>
+        <div class="frmDets">
+          <div class="frmDetHd">
+            <img src="img/SOS-Icon-18.png" alt="" />
+            <img src="img/SOS-Icon-19.png" alt="" />
+          </div>
+          <div class="frmDetBd">
+            <span class=""><em>Transaction Amount:</em> <em>RM 9600</em></span>
+            <span class=""><em>Order ID:</em> <em>3EDF34FRODF3R3</em></span>
+          </div>
+          <p></p>
+          <div class="paymentFormFields">
+            <div class="form-group">
+                <label for="">Cardholder Name*:</label>
+                <input type="text" name="cardholdernme" class="form-control my-input" id="cardholdernme">
+            </div>
+            <div class="form-group">
+                <label for="">CVV / CVC*:</label>
+                <input type="text" name="CVV" class="form-control my-input" id="CVV">
+            </div>
+            <div class="form-group">
+                <label for="">Card Number*:</label>
+                <input type="text" name="cardNumber" class="form-control my-input" id="cardNumber">
+            </div>
+            <div class="form-group">
+                <label for="">Expiry Date (MMYY)*:</label>
+                <select class="selectpmMonth" id="">
+                  <option>Month</option>
+                  <option>January</option>
+                  <option>February</option>
+                  <option>March</option>
+                  <option>April</option>
+                  <option>May</option>
+                  <option>June</option>
+                  <option>July</option>
+                  <option>August</option>
+                  <option>September</option>
+                  <option>October</option>
+                  <option>November</option>
+                  <option>December</option>
+                </select>
+                /
+                <select class="selectpmYear" id="">
+                  <option>Year</option>
+                  <option>2018</option>
+                  <option>2017</option>
+                  <option>2016</option>
+                  <option>2015</option>
+                  <option>2014</option>
+                  <option>2013</option>
+                  <option>2012</option>
+                  <option>2011</option>
+                  <option>2010</option>
+                  <option>2009</option>
+                  <option>2008</option>
+                  <option>2007</option>
+                  <option>2006</option>
+                </select>
+            </div>
+
+            <p>Click ‘Process Transaction’ to charge your card. Only click the button once. Using the ‘Back’, ‘Refresh’ or ‘Cancel’ button after you press the ‘Process Transaction’ button will not stop the transaction from being processed and may result in a double charge.</p>
+          
+          </div>
+          <a href="#" id="pcTsct" class="fl">Process Transaction</a>
+          <a href="#" id="cnTsct" class="fr">Cancel Transaction</a>
+        </div>
+      </div>
+      <div class="paymentSuccessful hide">
+        <img src="img/SOS-Icon-22.png" alt="" />
+        <h3>PAYMENT SUCCESSFUL</h3>
+        <p>Thank you, your payment has been successful.</p>
+        <div class="paySuccTable">
+          <span><em>ORDER REF</em><em>8675309</em></span>
+          <span><em>ORDER DATE</em><em>24 AUG 2018 12:03</em></span>
+          <span><em>PAYMENT TYPE</em><em>Visa</em></span>
+          <span><em>CARD HOLDER NAME</em><em>Johnsan Tan</em></span>
+          <span><em>PAYMENT AMOUNT</em><em>RM 9600</em></span>
+        </div>
+        <span class="redirect">You will be redirected to SOS page shortly</span>
+      </div>
+
+      <div class="paymentSuccessLast">
+        <img src="img/SOS-Icon-22-full.png" alt="" />
+        <h3>PAYMENT SUCCESSFUL</h3>
+        <div class="paymntBd mt20">
+          <span class=""><em class="curr">RM</em><em class="amt">9600</em></span>
+          <span><em class="invLbl">Invoice ID:</em><em class="invNum">#12245</em></span>
+          <a href="#" class="printInv">Print Invoice</a>
+          <p>Your invoice will send to your email<em>johnson.tan@gmail.com</em>shortly.</p>
+          <p class="secP mt50">Please go to <a href="#">my profile</a> to update your memeber details.</p>
+          <a href="#" id="okBtn">Done</a>
+        </div>
+      </div>
+    </section>    
 
     <div class="popups">
       <div class="profUpdated hide">

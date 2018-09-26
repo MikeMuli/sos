@@ -2544,7 +2544,7 @@
      font-size: 4em;
      margin-bottom: 5px;
 }
- .popups .visitation-confirmation .pop-upBdy #okBtn, .resetPassConf #okBtn, .resetPassForm #okBtn, .resetPassOk #okBtn, .profUpdated #okBtn, .profIncomp #okBtn, .credDeduct #okBtn {
+ .popups .visitation-confirmation .pop-upBdy #okBtn, .resetPassConf #okBtn, .resetPassForm #okBtn, .resetPassOk #okBtn, .profUpdated #okBtn, .profIncomp #okBtn, .credDeduct #okBtn, .paymntBd #okBtn {
      display: inline-block;
      background: #c3272f;
      color: #fff;
@@ -2674,11 +2674,14 @@
  .resetPassOk p {
      margin-bottom: 20px;
 }
- .resetPassOk #restLogin , .profIncomp .pG a {
+ .resetPassOk #restLogin , .profIncomp .pG a, .paymntBd .secP a {
      display: inline-block;
      color: #c3272f;
      font-style: italic;
      text-decoration: underline;
+}
+.paymntBd .secP a {
+     font-weight: 600;
 }
  .memberSect .accordionWrapper{
      padding: 10px 10px;
@@ -2793,6 +2796,247 @@
   top: 9px;
   right: 6px;
   z-index: 3;
+}
+
+.merchantOne {
+    display: block;
+    margin: 0 auto;
+    padding: 4em 10em;
+    text-align: center;
+}
+
+.merchantOne h2 {
+    display: inline-block;
+    padding-bottom: 0.25em;
+    color: #616161;
+    font-size: 3em;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: left;
+    border-bottom: 30px solid #86898e;
+}
+
+.merchantOne .paymentDetails {
+    display: inline-block;
+    width: 75%;
+}
+
+.merchantOne .paymentDetails .pDHd {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    text-align: left;
+}
+
+.merchantOne .paymentDetails .paymDetHd {
+    display: inline-block;
+    background: #616161;
+    width: 100%;
+    padding: 0.5em 2em;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #fff;
+    text-align: left;
+}
+
+.merchantOne .paymentDetails .frmDets {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.merchantOne .paymentDetails .frmDetHd {
+    display: block;
+    float: right;
+    clear: both;
+}
+
+.merchantOne .paymentDetails .frmDetBd, .merchantOne .paymentDetails .frmDetBd {
+    display: block;
+    clear: both;
+}
+
+.merchantOne .paymentDetails .frmDetBd, .merchantOne .paymentDetails .frmDetBd span {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.merchantOne .paymentDetails .frmDetBd, .merchantOne .paymentDetails .frmDetBd span em {
+    font-style: normal;
+    text-align: left;
+    font-weight: 500;
+}
+
+.merchantOne .paymentDetails .frmDetBd span em:first-child { display: inline-block; width: 150px; }
+.merchantOne .paymentDetails .frmDetBd span em:nth-child(2) { display: inline-block; width: 233px; }
+
+.merchantOne .paymentDetails .frmDetBd, .merchantOne .paymentDetails .frmDetBd span em:first-child {
+    text-align: right;
+    font-weight: 600;
+}
+
+.merchantOne .paymentDetails .paymentFormFields {
+    display: inline-block;
+}
+
+.merchantOne .paymentDetails .paymentFormFields .form-group {
+    display: inline-block;
+    width: 100%;
+}
+
+.merchantOne .paymentDetails .paymentFormFields .form-group label {
+    display: inline-block;
+    width: 170px;
+    color: #616161;
+    text-align: right;
+}
+.merchantOne .paymentDetails .paymentFormFields .form-group input {
+    display: inline-block;
+    width: 250px;
+    padding: 1em 0.5em;
+    font-size: 1.2em;
+    text-align: left;
+    border: 1px solid #616161;
+    border-radius: 0;
+}
+
+.merchantOne .paymentDetails .paymentFormFields .form-group select {
+    display: inline-block;
+    width: 118px;
+    padding: 0.3em 0.5em;
+    font-size: 1.2em;
+    text-align: left;
+    border: 1px solid #616161;
+    border-radius: 0;
+}
+
+.merchantOne .paymentDetails .paymentFormFields p {
+    margin-top: 1.5em;
+    margin-bottom: 3em;
+    text-align: left;
+}
+
+.merchantOne .paymentDetails .frmDetHd img {
+    max-width: 90px;
+} 
+
+.merchantOne .paymentDetails #pcTsct {
+    background: #2aa028;
+    color: #fff;
+    letter-spacing: 0.06em;
+    padding: 1.2em 2.4em;
+    font-weight: 600;
+}
+
+.merchantOne .paymentDetails #cnTsct {
+    background: #c3272f;
+    color: #fff;
+    letter-spacing: 0.06em;
+    padding: 1.2em 2.4em;
+    font-weight: 600;
+}
+
+.paymentSuccessful, .paymentSuccessLast {
+    display: inline-block;
+    width: 100%;
+    padding: 4em 0;
+}
+
+.paymentSuccessful img, .paymentSuccessLast img {
+    max-width: 180px;
+}
+
+.paymentSuccessful h3, .paymentSuccessful p, .paymentSuccessLast h3, .paymentSuccessLast p {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.paymentSuccessful p {
+    font-weight: 500;
+}
+
+.paymntBd {
+    display: block;
+}
+
+.paymntBd span {
+    display: block;
+}
+
+.paymntBd span em {
+    font-style: normal;
+}
+
+.paymntBd span em.curr { font-size: 1em; font-weight: 600; }
+
+.paymntBd span em.amt { padding-left:5px; font-size: 2em; font-weight: 600; }
+
+.paymntBd span em.invLbl { font-size: 1.3em; font-weight: 500; }
+
+.paymntBd span em.invNum { padding-left:5px; font-size: 1.6em; font-weight: 600; }
+
+.paymntBd a.printInv { color: ; font-style: italic; }
+
+.paymentSuccessLast p { font-weight: 500; margin-top: 1.5em; line-height: 1.3em; margin-bottom: 1em; }
+
+.paymentSuccessLast p em {
+    display: block;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.paymentSuccessLast .printInv {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #c3272f;
+    text-decoration: underline;
+}
+
+.paymentSuccessLast .paymntBd .secP {
+    font-size: 1em;
+}
+
+.paymentSuccessful .paySuccTable {
+    display: block;
+    width: 650px;
+    margin: 15px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+.paymentSuccessful .paySuccTable span {
+    display: block;
+}
+
+.paymentSuccessful .paySuccTable span em {
+    display: inline-block;
+    padding: 0.7em 0;
+    font-weight: 600;
+    font-size: 1.2em;
+    font-style: normal;
+}
+
+.paymentSuccessful .paySuccTable span em:first-child {
+    width: 50%;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.paymentSuccessful .paySuccTable span em:nth-child(2) {
+    width: 50%;
+    padding-left: 10px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.paymentSuccessful .redirect {
+    display: inline-block;
+    width: 100%;
+    font-size: 0.9em; 
+    text-align: center;
 }
 
  @media screen and (max-width: 480px) {
