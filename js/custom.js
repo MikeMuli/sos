@@ -378,14 +378,14 @@
 			$(this).siblings().removeClass('active');
 			$(this).addClass('active');
 			$('.creditDiv .tabsContent .tabTopUpCred').removeClass('hide');
-			$('.creditDiv .tabsContent .tabCredHistory').addClass('hide');
+			$('.creditDiv .tabsContent .tabCredHistory, .creditDiv .tabsContent .tabInvoiceHistory').addClass('hide');
 		});
 
 		$('.creditDiv .tabs #tab2').on('click', function(){
 			$(this).siblings().removeClass('active');
 			$(this).addClass('active');
 			$('.creditDiv .tabsContent .tabCredHistory').removeClass('hide');
-			$('.creditDiv .tabsContent .tabTopUpCred').addClass('hide');
+			$('.creditDiv .tabsContent .tabTopUpCred, .creditDiv .tabsContent .tabInvoiceHistory').addClass('hide');
 		});
 
 		$('.credOptionList .credOption').on('click', function() {
@@ -415,6 +415,27 @@
 				}
 			});
 			$('.summaryTableDiv').removeClass('hide');
+		});
+
+		$('.creditDiv .tabs #tab3').on('click', function(){
+			$(this).siblings().removeClass('active');
+			$(this).addClass('active');
+			$('.creditDiv .tabsContent .tabInvoiceHistory').removeClass('hide');
+			$('.creditDiv .tabsContent .tabTopUpCred, .creditDiv .tabsContent .tabCredHistory').addClass('hide');
+		});
+
+		$('.facBookCont .rmFifTabs #tabs1').on('click', function(){
+			$(this).siblings().removeClass('active');
+			$(this).addClass('active');
+			$('.rmFifTabContentUpcoming').removeClass('hide');
+			$('.rmFifTabContentPast').addClass('hide');
+		});
+
+		$('.facBookCont .rmFifTabs #tabs2').on('click', function(){
+			$(this).siblings().removeClass('active');
+			$(this).addClass('active');
+			$('.rmFifTabContentUpcoming').addClass('hide');
+			$('.rmFifTabContentPast').removeClass('hide');
 		});
 
 		var accItem = document.getElementsByClassName('accordionItem');

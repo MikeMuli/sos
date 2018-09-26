@@ -131,11 +131,12 @@
             </div>
             <div class="col-md-12 bkBd nopdlr">
               <div class="tabs">
-                <a href="#" id="tab1" class="active">Top-Up Credit</a>
+                <a href="#" id="tab1">Top-Up Credit</a>
                 <a href="#" id="tab2">Credit History</a>
+                <a href="#" id="tab3" class="active">Invoice History</a>
               </div>
               <div class="tabsContent">
-                <div class="tabTopUpCred">
+                <div class="tabTopUpCred hide">
                   <span class="tabTpHd">
                     TOP UP AMOUNT<br/><i>(RM1=1 Credit)</i>
                   </span>
@@ -260,6 +261,49 @@
                     <span class="downloadLink">Download All</span>
                   </div>
                   <table class="table table-striped credhistTable">
+                    <thead>
+                        <tr>
+                           <th>NO.</th>
+                           <th>Date</th>
+                           <th>Invoice Number</th>
+                           <th>Amount</th>
+                           <th>Download</th>
+                        </tr>
+                     </thead>
+                     <tr>
+                        <td>1</td>
+                        <td>07 JULY 2018</td>
+                        <td>#11312</td>
+                        <td>$150</td>
+                        <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="icon icon-download2"></span></a></td>
+                     </tr>
+                     <tr>
+                        <td>2</td>
+                        <td>01 JULY 2018</td>
+                        <td>#10143</td>
+                        <td>$150</td>
+                        <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="icon icon-download2"></span></a></td>
+                     </tr>
+                  </table>
+                </div>
+
+                <div class="tabInvoiceHistory">
+                  <div class="tabinvHTop">
+                    <select class="selectInvHst" id="">
+                        <option>Today</option>
+                        <option>xxxx</option>
+                        <option>xxxx</option>
+                        <option>xxxx</option>
+                    </select>
+                    <select class="selectInvHst2" id="">
+                        <option>All</option>
+                        <option>xxxx</option>
+                        <option>xxxx</option>
+                        <option>xxxx</option>
+                    </select>
+                    <span class="downloadLink">Download All</span>
+                  </div>
+                  <table class="table table-striped invoicehistTable">
                     <thead>
                         <tr>
                            <th>NO.</th>
@@ -412,27 +456,73 @@
                 <div class="rmContent hide">
                   <div class="rmFifLeft">
                       <div class="rmFifTabs">
-                        <a href="#" id="tabs1" class="active">Upcoming</a>
-                        <a href="#" id="tabs2">Past</a>
+                        <a href="#" id="tabs1">Upcoming</a>
+                        <a href="#" id="tabs2" class="active">Past</a>
                       </div>
                       <div class="rmFifTabContent">
-                        <div class="rmFifTabContentUpcoming">
+                        <div class="rmFifTabContentUpcoming hide">
                           <div class="event">
                             <span class="icon icon-cross reDel"></span>
-                            <span>20 AUG 2018</span>
-                            <span>2:00PM</span>
-                            <span>SS15</span>
-                            <span>BOOK CONFERENCE ROOM</span>
+                            <span>Book Conference Room</span>
+                            <div class="evDte">
+                              <span class="dteNum">20</span>
+                              <span class="dteMon">AUG</span>
+                            </div>
+                            <span class="location">SOS1 - SS15</span>
+                            <span class="time">2:00PM</span>
                           </div>
                           <div class="event">
                             <span class="icon icon-cross reDel"></span>
-                            <span>20 AUG 2018</span>
-                            <span>2:00PM</span>
-                            <span>SS15</span>
-                            <span>BOOK CONFERENCE ROOM</span>
+                            <span>Book Conference Room</span>
+                            <div class="evDte">
+                              <span class="dteNum">20</span>
+                              <span class="dteMon">AUG</span>
+                            </div>
+                            <span lass="location">SOS1 - SS15</span>
+                            <span class="time">2:00PM</span>
                           </div>
                         </div>
                         <div class="rmFifTabContentPast">
+                          <select class="selectContMonth" id="">
+                            <option>January</option>
+                            <option>February</option>
+                            <option>March</option>
+                            <option>April</option>
+                            <option>May</option>
+                            <option>June</option>
+                            <option>July</option>
+                            <option>August</option>
+                            <option>September</option>
+                            <option>October</option>
+                            <option>November</option>
+                            <option>December</option>
+                          </select>
+                          <select class="selectContLst" id="">
+                            <option>All</option>
+                            <option>xxxx</option>
+                            <option>xxxx</option>
+                            <option>xxxx</option>
+                          </select>
+                          <div class="event">
+                            <span class="icon icon-cross reDel"></span>
+                            <span>Book Conference Room</span>
+                            <div class="evDte">
+                              <span class="dteNum">20</span>
+                              <span class="dteMon">AUG</span>
+                            </div>
+                            <span class="location">SOS1 - SS15</span>
+                            <span class="time">2:00PM</span>
+                          </div>
+                          <div class="event">
+                            <span class="icon icon-cross reDel"></span>
+                            <span>Book Conference Room</span>
+                            <div class="evDte">
+                              <span class="dteNum">20</span>
+                              <span class="dteMon">AUG</span>
+                            </div>
+                            <span lass="location">SOS1 - SS15</span>
+                            <span class="time">2:00PM</span>
+                          </div>
                         </div>
                       </div>
                   </div>
@@ -540,7 +630,7 @@
           <li><a href="#" id="facilitiesTap" class="active"><img src="img/icon-15.png" alt="" /> Facilities Booking</a></li>
         </ul>
         <div class="logOut">
-          <a href="#"><img src="img/" alt="" />Log Out</a>
+          <a href="#"><span class="icon icon-exit"></span>Log Out</a>
         </div>
     </section>
 
@@ -572,6 +662,21 @@
         <a href="#" id="okBtn">Ok</a>
       </div>
       </div>
+
+      <div class="credDeduct hide">
+        <div id="popClose"><span class="icon icon-cross"></span></div>
+        <div class="pop-upBdy">
+        <div><img src="img/SOS-Icon-17.png"></div>
+        <h3>Success</h3>
+        <div class="pG">
+          <p>
+            <em class="credtoDeduct">32 Credits</em>has been deducted.<br/>Your successfully book the convinience!
+          </p>
+        </div>
+        <a href="#" id="okBtn">Ok</a>
+      </div>
+      </div>
+
       <div class="overlayPopup hide"></div>
     </div>
 
