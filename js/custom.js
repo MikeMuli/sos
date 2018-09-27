@@ -99,15 +99,11 @@
 	};
 
 	
-	
-	
 	var stellarInit = function() {
 		if( !isMobile.any() ) {
 			$(window).stellar();
 		}
 	};
-
-
 
 	// Page Nav
 	var clickMenu = function() {
@@ -446,6 +442,11 @@
 			$(this).addClass('active');
 			$('.rmFifTabContentUpcoming').addClass('hide');
 			$('.rmFifTabContentPast').removeClass('hide');
+		});
+
+		$('.backend #userMenuBtn').on('click', function(){
+			$('.backend .rightnavtoggle').toggleClass('clicked');
+			$('.backendNav').toggleClass('toggled');
 		});
 
 		var accItem = document.getElementsByClassName('accordionItem');
