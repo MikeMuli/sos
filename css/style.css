@@ -3830,6 +3830,102 @@ input:checked+.slider:before {
      margin-right: 1em;
 }
 
+     .invoice {
+          background: #ddd;
+          text-align: center;
+     }
+
+     .invoiceBdy {
+          display: inline-block;
+          width: calc(100% - 80px);
+          padding: 60px;
+          background: #fff;
+     }
+
+     .invoiceBdy .invoiceHd {
+          display: inline-block;
+          width: 100%;
+          text-align: center;
+     }
+
+     .invoiceBdy .invoiceHd .imgLogo {
+          display: inline-block;
+          margin-bottom: 40px;
+     }
+
+     .invoiceBdy .invoiceHd span {
+          display: inline-block;
+          font-size: 18px;
+          font-weight: 600;
+          text-transform: uppercase;
+          width: 100%;
+     }
+
+     .invoiceBdy .invoiceHd span em {
+          display: block;
+          font-size: 14px;
+     }
+
+     .invoiceBdy .invoiceHd span.invNum {
+          font-size: 32px;
+          font-weight: 600;
+     }
+
+     .invoiceBdy .invoiceCnt {
+          display: inline-block;
+          width: 100%;
+     }
+
+     .invoiceBdy .invoiceCnt .address {
+          display: inline-block;
+          width: 45%;
+     }
+
+     .invoiceBdy .invoiceCnt .address span {
+          display: block;
+          font-size: 14px;
+     }
+
+     .invoiceBdy .invoiceCnt .address span:first-child {
+          text-transform: uppercase;
+          font-size: 18px;
+          font-weight: 600;
+     }
+
+     .transactionDetails {
+          display: inline-block;
+          width: 100%;
+     }
+
+     .transactionDetails .transactionRow {
+          display: inline-block;
+          width: 100%;
+          padding: 20px 0;
+     }
+
+     .transactionDetails .transactionRow span.icon, .transactionDetails .transactionRow .rowLabel, .transactionDetails .transactionRow .transactionInput {
+          display: inline-block;
+          vertical-align: middle;
+     }
+
+     .itemTable {
+          display: inline-block;
+          width: 100%;
+     }
+
+     .itemTable .iTableHd {
+          display: inline-block;
+          width: 100%;
+          margin-top: 30px;
+     }
+
+     .itemTable .iTableHd span {
+          font-weight: 600;
+          font-size: 24px;
+          text-transform: uppercase;
+     }
+
+
 @media screen and (max-width: 1550px) {
     .probootstrap-section {
      padding: 4em 2em;
